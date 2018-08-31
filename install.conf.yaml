@@ -8,5 +8,7 @@
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
     ~/.xinitrc: xinitrc
+    ~/.config/nvim/init.vim: nvimrc
 
-
+- shell:
+  - [mkdir -p ~/.config/nvim, Creating nvim directory]
