@@ -12,3 +12,4 @@
 
 - shell:
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
+  - [sudo pacman -S --noconfirm terminator]
