@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editor Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number relativenumber 
+set number relativenumber
 set tabstop=4 " Indent 4 spaces in size but still tab char
 set shiftwidth=4	
 set encoding=UTF-8
@@ -16,14 +16,16 @@ call plug#begin()
 Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'https://github.com/octol/vim-cpp-enhanced-highlight.git' 				" better cpp syntax
-Plug 'https://github.com/vim-airline/vim-airline.git'
-Plug 'https://github.com/cohama/lexima.vim.git' 							" auto close characters
+Plug 'https://github.com/vim-airline/vim-airline.git'						" Bottom bar 
+Plug 'https://github.com/jiangmiao/auto-pairs.git' 							" auto close characters
 Plug 'https://github.com/scrooloose/nerdtree.git' 							" NERD TREE
-Plug 'https://github.com/tpope/vim-commentary.git'
-Plug 'https://github.com/enricobacis/vim-airline-clock.git'
+Plug 'https://github.com/tpope/vim-commentary.git'							"Comment multiple lines with gc
+Plug 'https://github.com/enricobacis/vim-airline-clock.git'					" Adds time in airline bar
 Plug 'https://github.com/roxma/nvim-yarp.git' 								" Deoplete dependency
 Plug 'https://github.com/vim-syntastic/syntastic.git' 						" Syntax check
 Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown composer
+Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'zchee/deoplete-clang'
@@ -38,6 +40,7 @@ endif
 	Plug 'haishanh/night-owl.vim' 
 	Plug 'https://github.com/neutaaaaan/iosvkem.git'
 	Plug 'vim-airline/vim-airline-themes'
+	Plug 'https://github.com/srcery-colors/srcery-vim.git'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -52,8 +55,28 @@ call plug#end()
 	set completeopt-=preview   " Close preview window
 
 	inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" 
+	let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}  			" Remvove annoying double esc to exit insert mode
 
+" Nerd Tree 
+	let mapleader = " "
+	nnoremap <leader>p <C-P>
+	nnoremap <leader>\ :NERDTreeToggle<Enter>
+	let NERDTreeQuitOnOpen = 1
+	let NERDTreeDirArrows = 1
+	let NERDTreeShowLineNumbers=1 " enable line numbers
+	let g:NERDTreeDirArrowExpandable = '▸'
+	let g:NERDTreeDirArrowCollapsible = '▾'
+	autocmd FileType nerdtree setlocal relativenumber " make sure relative line numbers are used
+	" open on startup if no files were specified
+	autocmd StdinReadPre * let s:std_in=1 " don't open NERDTree when commandline argument is passed
+	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif " don't open NERDTree when commandline argument is passed
 
+	" Hide exe files
+	let NERDTreeIgnore = ['\.pyc$', '\.o', '\.class', '\.zip', 'exe']
+
+" Ctrl P immediate buffers
+	let g:ctrlp_cmd = 'CtrlPBuffer'
+	let g:ctrlp_working_path_mode = 'c'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -79,45 +102,32 @@ hi! MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Key Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = " "
 " Switch split windows
-	let mapleader = " "
 	nnoremap <leader>w <C-w>
+	
 " Scrolling "
 	nnoremap <A-j> 3<C-e>
 	nnoremap <A-k> 3<C-y>
-" Change buffers with numbers "
-	nnoremap <leader>1 :b1<CR>
-	nnoremap <leader>2 :b2<CR>
-	nnoremap <leader>3 :b3<CR>
-	nnoremap <leader>4 :b4<CR>
-	nnoremap <leader>5 :b5<CR>
-	nnoremap <leader>6 :b6<CR>
-	nnoremap <leader>7 :b7<CR>
-	nnoremap <leader>8 :b8<CR>
-	nnoremap <leader>9 :b9<CR>
+	
 
-" Change to next buffer with ctrl-n and ctrl-b
-	nnoremap <C-m> :bn<CR>
-	nnoremap <C-n> :bp<CR>
+let mapleader = ","
+" Easier Split Windows
+	nnoremap <leader>v :vsplit 
+	nnoremap <leader>s :split 
+	nnoremap <leader>r <C-w>q
+" Easier saving
+	nnoremap <leader>w :w<enter>
 
-" Ctrl P immediate buffers
-	let g:ctrlp_cmd = 'CtrlPBuffer'
-	let g:ctrlp_working_path_mode = 'c'
+"Easy access to config files
+	nnoremap <leader>sv :source ~/.dotfiles/nvimrc<enter>
+	nnoremap <leader>ev :split ~/.dotfiles/nvimrc<enter>	
 
-" Nerd Tree 
-	nnoremap <leader>p <C-P>
-	nnoremap <Leader>\ :NERDTreeToggle<Enter>
-	let NERDTreeQuitOnOpen = 1
-	let NERDTreeDirArrows = 1
-	let NERDTreeShowLineNumbers=1 " enable line numbers
-	let g:NERDTreeDirArrowExpandable = '▸'
-	let g:NERDTreeDirArrowCollapsible = '▾'
-	autocmd FileType nerdtree setlocal relativenumber " make sure relative line numbers are used
-	" open on startup if no files were specified
-	autocmd StdinReadPre * let s:std_in=1
-	autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-	" Hide exe files
-	let NERDTreeIgnore = ['\.pyc$', '\.o', '\.class', '\.zip', 'exe']
+
+
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 

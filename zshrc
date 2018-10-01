@@ -111,8 +111,17 @@ alias cos226="cd ~/Documents/uni/cos226"
 alias wtw285="cd ~/Documents/uni/wtw285"
 alias cmy127="cd ~/Documents/uni/cmy127"
 
+export c214=~/Documents/uni/cos214
+export c284=~/Documents/uni/cos284
+export c226=~/Documents/uni/cos226
+export w285=~/Documents/uni/wtw285
+export c127=~/Documents/uni/cmy127
 
-#ls after cd
+# config file variables
+export VIMRC=~/.dotfiles/nvimrc
+export ZSHRC=~/.dotfiles/zshrc
+
+#l after cd
 
 function  cd {
     builtin cd "$@" && ls 
