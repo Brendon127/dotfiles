@@ -12,5 +12,6 @@
     ~/.gitmessage.txt: gitmessage
 
 - shell:
+  - [rm -rf ~/.config/nvim/init.vim, Remove old vimrc]
   - [mkdir -p ~/.config/nvim, Creating nvim directory]
-  - [sudo pacman -S --noconfirm terminator]
+
