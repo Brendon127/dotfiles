@@ -131,7 +131,8 @@ function  cd {
 
 # open application with defualt app
 alias open="xdg-open"
-
+# Create new flashcard template
+alias flashcards="cp /opt/templateFiles/StandardFlashCard.ods ./f.ods"
 
 
 ################################################################
