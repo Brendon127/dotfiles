@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+  - [mkdir -p ~/.config/nvim, Creating nvim directory]
+
 - link:
     ~/.profile: profile
     ~/.bash_profile: bash_profile
@@ -11,6 +14,4 @@
     ~/.config/nvim/init.vim: nvimrc
     ~/.gitmessage.txt: gitmessage
 
-- shell:
-  - [mkdir -p ~/.config/nvim, Creating nvim directory]
 
