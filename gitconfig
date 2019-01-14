@@ -1,6 +1,6 @@
 [user]
 	email = brendonvbiljoen@gmail.com
-	name = Brendon
+	name = Brendon van Biljoen
 [commit]
 	template = ~/.dotfiles/gitmessage
 [core]
