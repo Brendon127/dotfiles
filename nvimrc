@@ -26,6 +26,7 @@ Plug 'https://github.com/vim-syntastic/syntastic.git' 						" Syntax check
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown composer
 Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
+Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'zchee/deoplete-clang'
