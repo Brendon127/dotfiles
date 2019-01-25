@@ -42,6 +42,7 @@ endif
 	Plug 'https://github.com/neutaaaaan/iosvkem.git'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'https://github.com/srcery-colors/srcery-vim.git'
+	Plug 'https://github.com/tomasr/molokai.git'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -86,7 +87,7 @@ call plug#end()
 " Theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-colorscheme Iosvkem
+colorscheme molokai
 " Alow to be transparrent
 " hi Normal guibg=NONE ctermbg=NONE 
 " let g:airline#extensions#tabline#enabled = 1
