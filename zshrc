@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Custom Alias
 ################################################################
 #
+
+source ./env
+
 alias vim="nvim"
 alias vi="nvim"
 alias subl="subl3"
@@ -111,12 +114,14 @@ alias cos284="cd ~/Documents/uni/cos284"
 alias cos226="cd ~/Documents/uni/cos226"
 alias wtw285="cd ~/Documents/uni/wtw285"
 alias cmy127="cd ~/Documents/uni/cmy127"
+alias wifi='sudo create_ap wlp2s0 wlp2s0 suck_it_bronberg "$PASS"'
 
 export c214=~/Documents/uni/cos214
 export c284=~/Documents/uni/cos284
 export c226=~/Documents/uni/cos226
 export w285=~/Documents/uni/wtw285
 export c127=~/Documents/uni/cmy127
+
 
 # config file variables
 export VIMRC=~/.dotfiles/nvimrc
