@@ -27,6 +27,8 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown composer
 Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
 Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
+Plug 'mattn/emmet-vim'														" Emmet :)
+
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'zchee/deoplete-clang'
@@ -52,12 +54,11 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete "
 	let g:deoplete#enable_at_startup = 1
+	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 	" let g:deoplete#disable_auto_complete = 1
-	inoremap <expr> <C-n>  deoplete#mappings#manual_complete()deoplete#mappings#manual_complete
+	" inoremap <expr> <C-n>  deoplete#mappings#manual_complete()deoplete#mappings#manual_complete
 	set completeopt-=preview   " Close preview window
-
-	inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>" 
-	let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}  			" Remvove annoying double esc to exit insert mode
+	" let g:AutoClosePumvisible = {'ENTER': '<C-Y>', 'ESC': '<ESC>'}  			" Remvove annoying double esc to exit insert mode
 
 " Nerd Tree 
 	let mapleader = " "
@@ -79,6 +80,9 @@ call plug#end()
 " Ctrl P immediate buffers
 	let g:ctrlp_cmd = 'CtrlPBuffer'
 	let g:ctrlp_working_path_mode = 'c'
+
+" Emmet
+	let g:user_emmet_leader_key=','
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -93,10 +97,11 @@ colorscheme molokai
 " let g:airline#extensions#tabline#enabled = 1
 
 
-
 " remove bracket color confusion
 hi! MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE  
 
+" Change highlight line highlight color
+hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -125,10 +130,41 @@ let mapleader = ","
 	nnoremap <leader>sv :source ~/.dotfiles/nvimrc<enter>
 	nnoremap <leader>ev :split ~/.dotfiles/nvimrc<enter>	
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Function
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This <div>
+	"     |
+	" </div>
 
+	" instead of this 
 
+	" <div>
+" |</div>
+function! Expander()
+  let line   = getline(".")
+  let col    = col(".")
+  let first  = line[col-2]
+  let second = line[col-1]
+  let third  = line[col]
 
+  if first ==# ">"
+    if second ==# "<" && third ==# "/"
+      return "\<CR>\<C-o>==\<C-o>O"
 
+    else
+      return "\<CR>"
+
+    endif
+
+  else
+    return "\<CR>"
+
+  endif
+
+endfunction
+
+inoremap <expr> <CR> Expander()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
