@@ -15,18 +15,22 @@
   #   stdin: true
 
     # create config dir
-  - ["mkdir -p ~/.config/nvim Creating nvim directory"] 
-  - ["touch  ~/.config/nvim/init.vim Creating nvim file"] 
+  # - ["mkdir -p ~/.config/nvim Creating nvim directory"] 
 
-  - link:
+- link:
     ~/.profile: profile
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
     ~/.xinitrc: xinitrc
-    ~/.config/nvim/init.vim: nvimrc
+    ~/.config/nvim/init.vim: 
+      create: true
+      force: true
+      path: nvimrc
     ~/.gitmessage.txt: gitmessage
 
 - shell:
