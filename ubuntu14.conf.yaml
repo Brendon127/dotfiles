@@ -4,7 +4,11 @@
     # Add necesary pacakges for neovim and install
   - ["sudo add-apt-repository ppa:neovim-ppa/unstable"]
   - ["sudo apt-get update"]
-  - ["sudo apt-get install neovim"]
+  # - ["sudo apt-get install neovim"]
+  - 
+    command: "sudo apt-get install neovim"
+    description: Installing neovim
+    stdout: true
 
     # install vimplug
   - ["curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"] 
