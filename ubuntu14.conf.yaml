@@ -1,0 +1,24 @@
+- clean: ['~']
+
+- shell:
+    # Add necesary pacakges for neovim and install
+  - [sudo add-apt-repository ppa:neovim-ppa/unstable; sudo apt-get update; sudo apt-get install neovim]   
+    # install vimplug
+  - [curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim] 
+    # create config dir
+  - [mkdir -p ~/.config/nvim, Creating nvim directory] 
+
+  - link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
+    ~/.zshrc: zshrc
+    ~/.xinitrc: xinitrc
+    ~/.config/nvim/init.vim: nvimrc
+    ~/.gitmessage.txt: gitmessage
+
+- shell:
+  - [chsh -s /bin/zsh $USER, Change defualt terminal to zsh]
+
