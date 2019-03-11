@@ -9,13 +9,13 @@
     description: Installing neovim
     stdout: true
     stdin: true
-  - 
-    command: "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-    stdout: true
-    stdin: true
+  # - 
+    # command: "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    # stdout: true
+    # stdin: true
 
     # create config dir
-  - ["mkdir -p ~/.config/nvim Creating nvim directory"] 
+  # - ["mkdir -p ~/.config/nvim Creating nvim directory"] 
 
   - link:
     ~/.profile: profile
