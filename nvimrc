@@ -28,6 +28,7 @@ Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown compo
 Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
 Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
 Plug 'mattn/emmet-vim'														" Emmet :)
+Plug 'https://github.com/tpope/vim-fugitive.git'							" Awesome git wrapper
 
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
