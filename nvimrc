@@ -80,10 +80,16 @@ call plug#end()
 
 " Ctrl P immediate buffers
 	let g:ctrlp_cmd = 'CtrlPBuffer'
-	let g:ctrlp_working_path_mode = 'c'
+	let g:ctrlp_working_path_mode = 'c' 
 
 " Emmet
 	let g:user_emmet_leader_key=','
+" Fugutive
+	nnoremap <leader>gs :Gstatus<enter>  
+	nnoremap <leader>ga :Gwrite<enter>
+	nnoremap <leader>gc :Gcommit<enter>
+	nnoremap <leader>gd :Gdiff<enter>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -132,7 +138,7 @@ let mapleader = ","
 	nnoremap <leader>ev :split ~/.dotfiles/nvimrc<enter>	
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Function
+" Functions
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This <div>
 	"     |
