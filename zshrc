@@ -114,6 +114,7 @@ alias cos210="cd ~/Documents/uni/cos210"
 alias cos332="cd ~/Documents/uni/cos332"
 alias wifi='sudo create_ap wlp2s0 wlp2s0 suck_it_bronberg "$PASS"'
 
+alias capstone="cd ~/Documents/uni/cos301/assignments/capstone/"
 export c301=~/Documents/uni/cos301
 export c210=~/Documents/uni/cos210
 export c332=~/Documents/uni/cos332
@@ -126,9 +127,9 @@ export ZSHRC=~/.dotfiles/zshrc
 
 #l after cd
 
-function  cd {
-    builtin cd "$@" && ls 
-    }
+# function  cd {
+#     builtin cd "$@" && ls 
+#     }
 
 # open application with defualt app
 alias open="xdg-open"
