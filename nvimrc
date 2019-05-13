@@ -5,7 +5,9 @@ set number relativenumber
 set tabstop=4 " Indent 4 spaces in size but still tab char
 set shiftwidth=4	
 set encoding=UTF-8
-
+" Make code folds persistent
+" autocmd BufWinLeave *.* mkview 
+" autocmd BufWinEnter *.* silent loadview 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -22,13 +24,23 @@ Plug 'https://github.com/scrooloose/nerdtree.git' 							" NERD TREE
 Plug 'https://github.com/tpope/vim-commentary.git'							"Comment multiple lines with gc
 Plug 'https://github.com/enricobacis/vim-airline-clock.git'					" Adds time in airline bar
 Plug 'https://github.com/roxma/nvim-yarp.git' 								" Deoplete dependency
-Plug 'https://github.com/vim-syntastic/syntastic.git' 						" Syntax check
+" Plug 'https://github.com/vim-syntastic/syntastic.git' 						" Syntax check
+Plug 'https://github.com/w0rp/ale.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown composer
 Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
 Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
 Plug 'mattn/emmet-vim'														" Emmet :)
 Plug 'https://github.com/tpope/vim-fugitive.git'							" Awesome git wrapper
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 						" Live latex
+Plug 'https://github.com/airblade/vim-gitgutter.git'						" Git gutter
+
+
+" Deoplete Language support
+Plug 'https://github.com/Shougo/deoplete-clangx.git'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+
+
 
 if has('nvim')
 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -55,13 +67,33 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Deoplete "
 	let g:deoplete#enable_at_startup = 1
-	inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+	inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+	inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 	" let g:deoplete#disable_auto_complete = 1
 	" inoremap <expr> <C-n>  deoplete#mappings#manual_complete()deoplete#mappings#manual_complete
 	set completeopt-=preview   " Close preview window
 	" let g:AutoClosePumvisible = {'ENTER': '<C-Y>', 'ESC': '<ESC>'}  			" Remvove annoying double esc to exit insert mode
+	call deoplete#custom#option('max_list',15)
+	
+	" Deoplete clang support
+	call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+	call deoplete#custom#var('clangx', 'default_c_options', '')
+	call deoplete#custom#var('clangx', 'default_cpp_options', '')
+	" Deoplete javascript support
+	"
+	let g:deoplete#sources#ternjs#tern_bin = '/usr/lib/node_modules/tern/bin/tern'
+	let g:deoplete#sources#ternjs#timeout = 1
+	let g:deoplete#sources#ternjs#types = 1
+	let g:deoplete#sources#ternjs#depths = 1
+	let g:deoplete#sources#ternjs#docs = 1
+	let g:deoplete#sources#ternjs#include_keywords = 1
 
-" Nerd Tree 
+
+
+
+
+	
+	" Nerd Tree 
 	let mapleader = " "
 	nnoremap <leader>p <C-P>
 	nnoremap <leader>\ :NERDTreeToggle<Enter>
@@ -80,7 +112,8 @@ call plug#end()
 
 " Ctrl P immediate buffers
 	let g:ctrlp_cmd = 'CtrlPBuffer'
-	let g:ctrlp_working_path_mode = 'c' 
+	let g:ctrlp_working_path_mode = 'ra' 
+	let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " Emmet
 	let g:user_emmet_leader_key=','
@@ -89,7 +122,6 @@ call plug#end()
 	nnoremap <leader>ga :Gwrite<enter>
 	nnoremap <leader>gc :Gcommit<enter>
 	nnoremap <leader>gd :Gdiff<enter>
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -105,7 +137,7 @@ colorscheme molokai
 
 
 " remove bracket color confusion
-hi! MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE  
+hi MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE  
 
 " Change highlight line highlight color
 hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
@@ -174,5 +206,4 @@ endfunction
 inoremap <expr> <CR> Expander()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
