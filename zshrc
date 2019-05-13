@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dtys"
+ZSH_THEME="custom"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -124,7 +124,7 @@ export c216=~/Documents/uni/cos216
 # config file variables
 export VIMRC=~/.dotfiles/nvimrc
 export ZSHRC=~/.dotfiles/zshrc
-
+export PATH=/opt/cuda/bin:$PATH # cuda path
 #l after cd
 
 # function  cd {
