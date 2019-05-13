@@ -1,18 +1,10 @@
 - clean: ['~']
-
-- shell:
-  - [mkdir -p ~/.config/nvim, Creating nvim directory]
-
 - link:
-    ~/.profile: profile
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
+    ~/.gitconfig: git/gitconfig
+    ~/.zshrc: zsh/zshrc
     ~/.xinitrc: xinitrc
-    ~/.config/nvim/init.vim: nvimrc
-    ~/.gitmessage.txt: gitmessage
+    ~/.config/nvim/init.vim: vim/nvimrc
+    ~/.gitmessage.txt: git/gitmessage
 
 - shell:
   - [chsh -s /bin/zsh $USER, Change defualt terminal to zsh]
