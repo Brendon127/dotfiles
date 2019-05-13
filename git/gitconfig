@@ -2,7 +2,7 @@
 	email = brendonvbiljoen@gmail.com
 	name = Brendon van Biljoen
 [commit]
-	template = ~/.dotfiles/gitmessage
+	template = ~/.dotfiles/git/gitmessage
 [core]
 	editor = 'nvim' 
 [mergetool]
