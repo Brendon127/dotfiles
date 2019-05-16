@@ -137,11 +137,12 @@ colorscheme molokai
 
 
 " remove bracket color confusion
-hi MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE  
+" hi MatchParen cterm=NONE,bold gui=NONE,bold  guibg=#eee8d5 guifg=NONE  
 
 " Change highlight line highlight color
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white
+hi MatchParen cterm=bold ctermbg=none ctermfg=green
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
