@@ -149,3 +149,13 @@ alias go='git checkout '
 #
 #
 #
+#
+#
+################################################
+# IONIC + Android
+###############################################
+#
+export PATH=$PATH:/opt/android-studio/gradle/gradle-5.1.1/bin
+export ANDROID_SDK_ROOT=~/Android/Sdk/ 
+export ANDROID_HOME=/home/brendon/Android/Sdk
+export JAVA_HOME=/usr/lib/jvm/default
