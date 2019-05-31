@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 ################################################################
 #
 
-source ./env
+# source ./env
 
 alias vim="nvim"
 alias vi="nvim"
@@ -123,11 +123,12 @@ export c332=~/Documents/uni/cos332
 export c216=~/Documents/uni/cos216
 
 export dot=~/.dotfiles/
+export media=/run/media/brendon
 
 
 # config file variables
-export VIMRC=~/.dotfiles/nvimrc
-export ZSHRC=~/.dotfiles/zshrc
+export vrc=~/.dotfiles/vim/nvimrc
+export zrc=~/.dotfiles/zsh/zshrc
 export PATH=/opt/cuda/bin:$PATH # cuda path
 #l after cd
 
@@ -138,7 +139,7 @@ export PATH=/opt/cuda/bin:$PATH # cuda path
 # open application with defualt app
 alias open="xdg-open"
 # Create new flashcard template
-alias flashcards="cp /opt/templateFiles/StandardFlashCard.ods ./f.ods"
+alias flashcards="cp /opt/templates/standard-flashcard.ods ./f.ods"
 
 ################################################
 # git aliases
