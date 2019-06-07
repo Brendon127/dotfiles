@@ -2,10 +2,8 @@
 - link:
     ~/.gitconfig: git/gitconfig
     ~/.zshrc: zsh/zshrc
-    ~/.xinitrc: xinitrc
     ~/.config/nvim/init.vim: vim/nvimrc
     ~/.gitmessage.txt: git/gitmessage
+    ~/.xinitrc:  x/xinitrc
 
-- shell:
-  - [chsh -s /bin/zsh $USER, Change defualt terminal to zsh]
 
