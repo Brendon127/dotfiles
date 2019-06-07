@@ -42,7 +42,7 @@ hostname_color=$yellow
 local current_dir_color=$cyan
 local username_command="%n"
 local hostname_command="%m"
-local current_dir="%~"
+local current_dir="%. "
 
 local username_output="$username_color$username_command$white at "
 local hostname_output="$hostname_color$hostname_command$white in "
@@ -62,7 +62,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=">"
 ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE="<"
 ZSH_THEME_GIT_PROMPT_DIVERGED_REMOTE="$red<>"
 
-nl=$'\n%{\r%}';
+# nl=$'\n%{\r%}';
 
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
