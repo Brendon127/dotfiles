@@ -30,11 +30,12 @@ Plug 'https://github.com/w0rp/ale.git'
 Plug 'https://github.com/tpope/vim-surround.git'
 " Plug 'https://github.com/euclio/vim-markdown-composer.git' 					" Markdown composer
 " Plug 'https://github.com/gabrielelana/vim-markdown.git'						" Markdown syntax
-" Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
+Plug 'leafgarland/typescript-vim'											" Typscript syntax highlight
 Plug 'mattn/emmet-vim'														" Emmet :)
 Plug 'https://github.com/tpope/vim-fugitive.git'							" Awesome git wrapper
 " Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' } 						" Live latex
 Plug 'https://github.com/airblade/vim-gitgutter.git'						" Git gutter
+Plug 'https://github.com/Kazark/vim-SimpleSmoothScroll.git'					" Smooth scrool on C^D and C^U
 
 
 " Deoplete Language support
@@ -42,16 +43,8 @@ Plug 'https://github.com/Shougo/deoplete-clangx.git'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 
 
-
-" if has('nvim')
-" 	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" 	Plug 'zchee/deoplete-clang'
-" else
-" 	  Plug 'Shougo/deoplete.nvim'
-" 	  Plug 'roxma/nvim-yarp'
-" 	  Plug 'roxma/vim-hug-neovim-rpc'
-
-" endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-clang'
 
 " Themes
 	Plug 'haishanh/night-owl.vim' 
@@ -155,8 +148,8 @@ let mapleader = " "
 	nnoremap <leader>w <C-w>
 	
 " Scrolling "
-	nnoremap <A-j> 3<C-e>
-	nnoremap <A-k> 3<C-y>
+	nnoremap <C-j> 3<C-e>
+	nnoremap <C-k> 3<C-y>
 	
 
 let mapleader = ","
@@ -208,4 +201,6 @@ endfunction
 inoremap <expr> <CR> Expander()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Typescript syntax
+autocmd Filetype typescript setlocal tabstop=2|setl shiftwidth=2|setl softtabstop=2|setlocal expandtab
 
