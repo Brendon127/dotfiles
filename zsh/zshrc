@@ -109,18 +109,21 @@ alias vi="nvim"
 alias subl="subl3"
 
 #class codes
-alias cos301="cd ~/Documents/uni/cos301"
-alias cos210="cd ~/Documents/uni/cos210"
-alias cos332="cd ~/Documents/uni/cos332"
+alias cos301="cd ~/documents/uni/cos301"
+alias cos330="cd ~/documents/uni/cos330"
+alias cos326="cd ~/documents/uni/cos326"
+alias cos333="cd ~/documents/uni/cos333"
+alias cos110="cd ~/documents/uni/cos110"
 alias dot="cd ~/.dotfiles"
 
-alias capstone="cd ~/Documents/uni/cos301/assignments/capstone/"
+alias capstone="cd ~/documents/uni/cos301/capstone/"
 
-export capstone=~/Documents/uni/cos301/assignments/capstone/
-export c301=~/Documents/uni/cos301
-export c210=~/Documents/uni/cos210
-export c332=~/Documents/uni/cos332
-export c216=~/Documents/uni/cos216
+export capstone=~/documents/uni/cos301/capstone/
+export c301=~/documents/uni/cos301
+export c330=~/documents/uni/cos330
+export c326=~/documents/uni/cos326
+export c333=~/documents/uni/cos333
+export c110=~/documents/uni/cos110
 
 export dot=~/.dotfiles/
 export media=/run/media/brendon
@@ -150,6 +153,13 @@ alias gb='git branch '
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
+################################################
+# application aliases
+###############################################
+alias r='ranger'
+alias v='nvim'
+alias z='zathura --fork'
+alias t='terminator'
 ###############################################
 #
 #
@@ -160,7 +170,12 @@ alias go='git checkout '
 # IONIC + Android
 ###############################################
 #
-export PATH=$PATH:/opt/android-studio/gradle/gradle-5.1.1/bin
-export ANDROID_SDK_ROOT=~/Android/Sdk/ 
-export ANDROID_HOME=/home/brendon/Android/Sdk
+export PATH=$PATH:/opt/gradle-5.1.1/bin
+export ANDROID_SDK_ROOT=~/android/Sdk/ 
+export ANDROID_HOME=/home/brendon/android/Sdk
 export JAVA_HOME=/usr/lib/jvm/default
+
+export PATH=$PATH:/home/brendon/.dotfiles/scripts/bluetooth
+################################################
+# SCRIPTS FOLDER
+###############################################
