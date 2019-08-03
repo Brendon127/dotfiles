@@ -1,1 +1,7 @@
 exec i3
+
+
+xset +fp /home/brendon/.fonts
+xset fp rehash
+
+
