@@ -5,6 +5,14 @@ set number relativenumber
 set tabstop=4 " Indent 4 spaces in size but still tab char
 set shiftwidth=4	
 set encoding=UTF-8
+set showmode
+set autoindent
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=/home/brendon/.vimundo/
+
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit! " enable sudo save on :W
 " Make code folds persistent
 " autocmd BufWinLeave *.* mkview 
 " autocmd BufWinEnter *.* silent loadview 
