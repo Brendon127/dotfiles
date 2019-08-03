@@ -16,6 +16,9 @@ set $blue		#8ab3d5
 set $magenta    #a89bb9
 set $cyan	    #7bcdb4
 set $white	    #aaaaaa
+set $tan	    #D5B8A0
+set $steel-blue	   #4FABB7 
+set $see-green #1D6882
 
 
 
@@ -25,7 +28,7 @@ for_window [class=".*"] border pixel 5
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
-client.focused          $white  $white  $white  $white    $white
+client.focused          $blue  $blue  $blue  $blue    $steel-blue
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -224,20 +227,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-		position top
-		colors {
-        background $background
-        statusline $foreground
-        separator  $foreground
-        # <border name>			<border>		<background>	<text>
-        focused_workspace		$background		$background		$red
-        active_workspace		$background		$background		$white
-        inactive_workspace		$background		$background		$white
-        urgent_workspace		$background		$background		$white
-        }
-}
+# bar {
+#         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# 		position top
+# 		colors {
+#         background $background
+#         statusline $foreground
+#         separator  $foreground
+#         # <border name>			<border>		<background>	<text>
+#         focused_workspace		$background		$background		$red
+#         active_workspace		$background		$background		$white
+#         inactive_workspace		$background		$background		$white
+#         urgent_workspace		$background		$background		$white
+#         }
+# }
+
+# Starts polybar
+ exec_always --no-startup-id  ~/.config/polybar/launch.sh
 
 # Media Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.dotfiles/scripts/i3-controls/volume-up
@@ -252,7 +258,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # set monitors
-exec /home/.screenlayout/monitor-right.sh
+exec /home/.screenlayout/monitor-left.sh
 
 # set background
 exec_always feh --bg-scale /home/brendon/pictures/wallpapers/0000002.jpg
@@ -266,3 +272,7 @@ exec xcompmgr -c -f -n
 
 gaps inner 15
 gaps outer 15
+
+
+exec --no-startup-id nm-applet
+
