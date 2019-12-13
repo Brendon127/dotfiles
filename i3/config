@@ -23,18 +23,38 @@ set $see-green #1D6882
 
 
 # ## who needs window title when you have i3-gaps?
-for_window [class=".*"] border pixel 5
+for_window [class=".*"] border pixel 2
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #
-client.focused          $blue  $blue  $blue  $blue    $steel-blue
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.focused          $blue  $blue  $blue  $blue    $steel-blue
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+#client.background       #ffffff
+
+
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $border i3wm.color6 #f0f0f0
+set_from_resource $inactive i3wm.color4 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $border     $border     $border  $fg       $border
+client.focused_inactive $inactive     $inactive     $inactive  $inactive       $inactive
+client.unfocused        $inactive     $inactive     $inactive  $inactive       $inactive
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 
 set $mod Mod1
@@ -243,7 +263,6 @@ bindsym $mod+r mode "resize"
 # }
 
 # Starts polybar
- exec_always --no-startup-id  ~/.config/polybar/launch.sh
 
 # Media Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.dotfiles/scripts/i3-controls/volume-up
@@ -260,11 +279,12 @@ bindsym XF86MonBrightnessDown exec light -U 10
 # set monitors
 exec /home/.screenlayout/monitor-left.sh
 
-# set background
-exec_always feh --bg-scale /home/brendon/pictures/wallpapers/0000002.jpg
+exec xmodmap ~/.Xmodmap
+exec_always xrdb -load ~/.Xresources
+exec_always wal -i /home/brendon/pictures/wallpapers/0000010.jpg
+exec_always picom
 
-
-exec xcompmgr -c -f -n
+exec_always --no-startup-id  ~/.config/polybar/launch.sh
 
 # default_border none
 
@@ -272,7 +292,3 @@ exec xcompmgr -c -f -n
 
 gaps inner 15
 gaps outer 15
-
-
-exec --no-startup-id nm-applet
-
