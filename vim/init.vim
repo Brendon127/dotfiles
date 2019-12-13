@@ -1,3 +1,3 @@
-source general.vim
-source key-bindings.vim
-source plugins/plugins.vim
+source ~/.dotfiles/vim/general.vim
+source ~/.dotfiles/vim/key-bindings.vim
+source ~/.dotfiles/vim/plugins/plugins.vim
