@@ -1,0 +1,22 @@
+#!/bin/bash
+# Automate connecting bluetooth earphones. 
+#set -ex
+
+if [ $# -eq 0 ] ; then
+	bluetoothctl -- connect C0:28:8D:1A:72:FD 
+	pactl set-sink-volume bluez_sink.C0_28_8D_1A_72_FD.a2dp_sink 40%
+	pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 40%
+elif [ $1 = "-c" ] ; then
+	sudo rfkill unblock bluetooth
+	bluetoothctl -- power on
+	bluetoothctl -- connect C0:28:8D:1A:72:FD 
+	pactl set-sink-volume bluez_sink.C0_28_8D_1A_72_FD.a2dp_sink 40%
+	pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo 40%
+
+elif [ $1 = "-d" ] ; then
+	playerctl  pause
+	bluetoothctl -- disconnect C0:28:8D:1A:72:FD 
+	bluetoothctl -- power off
+fi
+
+
