@@ -47,7 +47,7 @@ let mapleader =" "
         " n -visual-file-explorer
                 nnoremap <silent> <leader>on :silent exec "!nemo&" <CR>
         " v - vimrc
-                nnoremap <silent> <leader>ov :e ~/.dotfiles/vim/<CR>
+                nnoremap <silent> <leader>ov :vsplit ~/.dotfiles/vim/<CR>
         " z - zshrc
                 nnoremap <silent> <leader>oz :e ~/.dotfiles/zsh/<CR>
                 
