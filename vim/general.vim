@@ -1,6 +1,7 @@
 " Aesthetics
 " colorsheme 
 syntax enable " Enable syntax highlighting
+colorscheme gruvbox
 
 " Spacing
 set tabstop=4 " number of visual spaces per tab
