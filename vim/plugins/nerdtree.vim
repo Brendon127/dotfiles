@@ -17,7 +17,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.o', '\.class', '\.zip', 'exe']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 :let g:NERDTreeWinSize=30
