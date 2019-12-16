@@ -10,3 +10,4 @@ call plug#end()
 
 
 source ~/.dotfiles/vim/plugins/coc.vim
+source ~/.dotfiles/vim/plugins/nerdtree.vim
