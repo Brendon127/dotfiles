@@ -20,4 +20,12 @@ let NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
-:let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=30
+
+let NERDTreeMapPreviewVSplit='gv'
+let NERDTreeMapPreviewSplit='gh'
+
+let NERDTreeMapOpenVSplit='v'
+let NERDTreeMapOpenSplit='h'
+
+
