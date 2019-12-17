@@ -5,6 +5,7 @@
     ~/.gitmessage.txt: git/gitmessage
     ~/.xinitrc: x/xinitrc
     ~/.Xmodmap: x/Xmodmap
+    ~/.Xresources: x/Xresources
     ~/.config/i3/config: i3/config
     ~/.screenlayout: misc/screenlayout
     ~/.config/polybar: polybar
