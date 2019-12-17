@@ -15,6 +15,7 @@ PACMAN_PACKAGES=(
 	pulseaudio-bluetooth
 	tree
 	zathura
+	zathura-pdf-poppler
 	redshift
 	sxiv
 	ranger
