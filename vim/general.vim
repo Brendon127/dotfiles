@@ -25,4 +25,5 @@ set hlsearch  " highlight matches
 
 " Misc
 set encoding=UTF-8
-
+set undofile " Maintain undo history between sessions
+set undodir=~/.vim/undodir
