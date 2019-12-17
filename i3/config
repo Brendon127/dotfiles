@@ -279,7 +279,7 @@ bindsym XF86MonBrightnessDown exec light -U 10
 # set monitors
 exec /home/.screenlayout/monitor-left.sh
 
-exec xmodmap ~/.Xmodmap
+exec_always xmodmap ~/.Xmodmap
 exec_always xrdb -load ~/.Xresources
 exec_always wal -i /home/brendon/pictures/wallpapers/0000010.jpg
 exec_always picom
