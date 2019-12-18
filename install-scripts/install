@@ -23,6 +23,7 @@ PACMAN_PACKAGES=(
 	ctags
 	rxvt-unicode
 	urxvt-perls
+	playerctl
 )
 AUR_PACKAGES=( 
 	polybar 
