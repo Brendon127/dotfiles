@@ -8,12 +8,14 @@ Plug 'ryanoasis/vim-devicons'                           " icons in NERDTree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'          " Syntax highlight for NERDTree
 
 Plug 'tpope/vim-commentary'                             " Easy comments with gcc
+Plug 'tpope/vim-surround'                               " Easy surround
 
 Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
 
 Plug 'mattn/emmet-vim'                                  " Quick html tags
 
-Plug 'MaxMEllon/vim-jsx-pretty'                                  " Quick html tags
+Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
+
 
 
 " Themes
