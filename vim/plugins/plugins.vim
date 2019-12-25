@@ -16,6 +16,7 @@ Plug 'mattn/emmet-vim'                                  " Quick html tags
 
 Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
 
+Plug 'airblade/vim-gitgutter'                           " Git gutter
 
 
 " Themes
@@ -28,3 +29,4 @@ source ~/.dotfiles/vim/plugins/coc.vim
 source ~/.dotfiles/vim/plugins/nerdtree.vim
 source ~/.dotfiles/vim/plugins/emmet.vim
 source ~/.dotfiles/vim/plugins/fzf.vim
+source ~/.dotfiles/vim/plugins/git-gutter.vim
