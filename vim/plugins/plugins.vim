@@ -17,6 +17,7 @@ Plug 'mattn/emmet-vim'                                  " Quick html tags
 Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
 
 Plug 'airblade/vim-gitgutter'                           " Git gutter
+Plug 'jreybert/vimagit'                                 " Magit for vim :D
 
 
 " Themes

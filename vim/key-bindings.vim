@@ -62,6 +62,8 @@ let mapleader =" "
             nnoremap <silent> <leader>ga :GitGutterStageHunk <CR>
         "u - previous hunk
             nnoremap <silent> <leader>gu :GitGutterUndoHunk <CR>
+        "s - next hunk
+            nnoremap <silent> <leader>gs :Magit<CR>
 
     "s - snippets
     "w - window
