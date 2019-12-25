@@ -53,6 +53,16 @@ let mapleader =" "
                 nnoremap <silent> <leader>oz :e ~/.dotfiles/zsh/<CR>
                 
     "p - project
+    "g - git
+        "n - next hunk
+            nnoremap <silent> <leader>gn :GitGutterNextHunk <CR>
+        "p - previous hunk
+            nnoremap <silent> <leader>gp :GitGutterPrevHunk <CR>
+        "a - previous hunk
+            nnoremap <silent> <leader>ga :GitGutterStageHunk <CR>
+        "u - previous hunk
+            nnoremap <silent> <leader>gu :GitGutterUndoHunk <CR>
+
     "s - snippets
     "w - window
         nnoremap <silent> <leader>w <C-w>
