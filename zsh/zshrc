@@ -115,21 +115,15 @@ alias vi="nvim"
 alias subl="subl3"
 
 #class codes
-alias cos301="cd ~/documents/uni/cos301"
-alias cos330="cd ~/documents/uni/cos330"
-alias cos326="cd ~/documents/uni/cos326"
-alias cos333="cd ~/documents/uni/cos333"
-alias cos110="cd ~/documents/uni/cos110"
-alias dot="cd ~/.dotfiles"
+alias cos341="cd $HOME/uni/cos341"
+alias cos344="cd $HOME/uni/cos344"
+alias cos314="cd $HOME/uni/cos314"
+alias dot="cd $HOME/.dotfiles"
 
-alias capstone="cd ~/documents/uni/cos301/capstone/"
 
-export capstone=~/documents/uni/cos301/capstone/
-export c301=~/documents/uni/cos301
-export c330=~/documents/uni/cos330
-export c326=~/documents/uni/cos326
-export c333=~/documents/uni/cos333
-export c110=~/documents/uni/cos110
+export cos314=$HOME/uni/cos314
+export cos344=$HOME/uni/cos344
+export cos341=$HOME/uni/cos341
 
 export dot=~/.dotfiles/
 export media=/run/media/brendon
