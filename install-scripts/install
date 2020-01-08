@@ -24,6 +24,7 @@ PACMAN_PACKAGES=(
 	rxvt-unicode
 	urxvt-perls
 	playerctl
+	zip
 )
 AUR_PACKAGES=( 
 	polybar 
