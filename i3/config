@@ -111,7 +111,7 @@ set $browser "3"
 set $pdf "4" 
 set $ws5 "5"
 set $ws6 "6"
-set $ws7 "7"
+set $dev "7"
 set $chat "8"
 set $ws9 "9"
 set $music "10" 
@@ -130,6 +130,8 @@ assign[class="Brave-browser"] $browser
 assign[class="Thunderbird"] $chat
 assign[class="Slack"] $chat
 for_window [class="Spotify"] move to workspace $music
+for_window [title="Android Emulator - Pixel_2_API_28:5554"] floating enable move to workspace $dev
+for_window [title="Emulator"] floating enable move to workspace $dev
 
 # Move entire workspace to another screen
 bindsym $mod+F1 move workspace to output $laptop-screen
@@ -145,7 +147,7 @@ bindsym $mod+3 workspace $browser
 bindsym $mod+4 workspace $pdf
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
+bindsym $mod+7 workspace $dev
 bindsym $mod+8 workspace $chat
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $music
@@ -157,7 +159,7 @@ bindsym $mod+Shift+3 move container to workspace $browser
 bindsym $mod+Shift+4 move container to workspace $pdf
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+7 move container to workspace $dev
 bindsym $mod+Shift+8 move container to workspace $chat
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $music
