@@ -132,6 +132,8 @@ assign[class="Slack"] $chat
 for_window [class="Spotify"] move to workspace $music
 for_window [title="Android Emulator - Pixel_2_API_28:5554"] floating enable move to workspace $dev
 for_window [title="Emulator"] floating enable move to workspace $dev
+for_window [class="Slack"] layout stacking
+for_window [class="Thunderbird"] layout stacking
 
 # Move entire workspace to another screen
 bindsym $mod+F1 move workspace to output $laptop-screen
