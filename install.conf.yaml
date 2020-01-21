@@ -4,6 +4,7 @@
     ~/.zshrc: zsh/zshrc
     ~/.gitmessage.txt: git/gitmessage
     ~/.xinitrc: x/xinitrc
+    ~/.config/zathura/zathurarc: zathura/zathurarc
     ~/.Xmodmap: x/Xmodmap
     ~/.Xresources: x/Xresources
     ~/.config/i3/config: i3/config
