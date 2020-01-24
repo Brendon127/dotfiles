@@ -11,6 +11,7 @@
     ~/.screenlayout: misc/screenlayout
     ~/.config/polybar: polybar
     ~/.config/nvim/coc-settings.json: vim/coc-settings.json
+    ~/.config/nvim/UltiSnips: vim/snippets
     ~/.config/nvim/init.vim: 
       create: true
       force: true
