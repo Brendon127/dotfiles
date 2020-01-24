@@ -81,6 +81,25 @@ alias gb='git branch '
 alias gd='git diff'
 alias go='git checkout '
 
+################################################
+# git functions
+###############################################
+function cm () { # commit message
+    git_root=`git rev-parse --show-toplevel`
+    params='set syntax=gitcommit | set spell'
+    nvim -c $params  $git_root/.git/CUSTOM_COMMIT_MESSAGE
+}
+
+function cf() { # git commit file
+    git_root=`git rev-parse --show-toplevel`
+    git commit -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+}
+
+function cdgr() { # git commit file
+    git_root=`git rev-parse --show-toplevel`
+    cd $git_root
+}
+
 function cleanup() {
 	echo $1;
 	CONTAINS_LOGS=($(grep -r -n --include \*.ts console.log  | cut -d: -f1 | uniq | tail -n 3))
