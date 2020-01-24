@@ -71,6 +71,8 @@ let mapleader =" "
     "c - code
         " d -jump to definition
                 nnoremap <silent> <leader>cd <C-]>
+        " l -jump to definition
+                nnoremap <silent> <leader>cl :CocCommand eslint.executeAutofix <CR> :w <CR>
     "/ - search
         " f -function
             nnoremap <silent> <leader>/f :BTags <CR>
