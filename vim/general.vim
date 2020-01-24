@@ -27,3 +27,6 @@ set hlsearch  " highlight matches
 set encoding=UTF-8
 set undofile " Maintain undo history between sessions
 set undodir=~/.vim/undodir
+
+" File specific configs
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab                " indentation for yml files 
