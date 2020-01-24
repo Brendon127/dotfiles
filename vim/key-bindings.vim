@@ -51,6 +51,8 @@ let mapleader =" "
                 nnoremap <silent> <leader>ov :vsplit ~/.dotfiles/vim/<CR>
         " z - zshrc
                 nnoremap <silent> <leader>oz :e ~/.dotfiles/zsh/<CR>
+        " s - snippets
+                nnoremap <silent> <leader>os :UltiSnipsEdit<CR>
                 
     "p - project
     "g - git

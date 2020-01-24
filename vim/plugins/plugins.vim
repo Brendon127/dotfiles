@@ -20,6 +20,7 @@ Plug 'airblade/vim-gitgutter'                           " Git gutter
 Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
 
+Plug 'SirVer/ultisnips'                                 " Snippets engine
 " Themes
 Plug 'morhetz/gruvbox'
 
@@ -31,3 +32,4 @@ source ~/.dotfiles/vim/plugins/nerdtree.vim
 source ~/.dotfiles/vim/plugins/emmet.vim
 source ~/.dotfiles/vim/plugins/fzf.vim
 source ~/.dotfiles/vim/plugins/git-gutter.vim
+source ~/.dotfiles/vim/plugins/ultisnips.vim

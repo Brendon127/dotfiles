@@ -1,0 +1,87 @@
+#####################################################################
+# General
+#####################################################################
+snippet if
+if(${1:input}) {
+	$2
+}
+$3
+endsnippet
+
+snippet ife
+if(${1:input}) {
+	$3
+} else {
+	$2
+}
+$4
+endsnippet
+
+snippet cw "Console warn"
+console.warn(${1:message});
+endsnippet
+
+snippet try "Try catch"
+try {
+	$0
+}
+catch(error) {
+	console.warn(error.message);
+}
+endsnippet
+#####################################################################
+# React Native 
+#####################################################################
+snippet rncc "React native Component"
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import PropTypes from 'prop-types';
+
+export default class ${1:Component} extends React.Component {
+    render() {
+		$2
+		return null;
+    }
+}
+$1.propTypes = {
+
+};
+
+const styles = StyleSheet.create({
+});
+endsnippet
+
+snippet rncr "Create reducer"
+import CreateAction from '../action-utilities/action-creator';
+
+const reducerName = '${1:name}';
+
+$2
+
+const initialState = {
+};
+
+export default function $1Reducer(state = initialState, action) {
+    switch (action.type) {
+        default:
+            return state;
+    }
+}
+endsnippet
+
+snippet rnca "Create action"
+const ${1:setIsLoading }= new CreateAction(reducerName, '${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
+export const $1Action = $1.action;
+
+case $1.actionType:
+	return {
+		...state,
+		${2: state}: action.payload
+	};
+	
+endsnippet
+
+# var ${1} = require('${1/(([a-z][A-Z])+)/\U_\E/g}');
+snippet req
+var ${1} = require('${1/([a-z]+)([A-Z][a-z]+)/\U$1_$2\E/g}');
+endsnippet
