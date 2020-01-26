@@ -1,8 +1,8 @@
 " Aesthetics
-" colorsheme 
 syntax enable " Enable syntax highlighting
-colorscheme gruvbox
 
+" colorsheme 
+colorscheme iceberg
 " Spacing
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing

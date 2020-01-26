@@ -21,8 +21,10 @@ Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
 
 Plug 'SirVer/ultisnips'                                 " Snippets engine
+
 " Themes
 Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
