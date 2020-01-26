@@ -34,7 +34,7 @@ let mapleader =" "
         nnoremap <silent> <leader>. :silent :Files<CR>
 
     "SPC - browse files sibling directory
-        nnoremap <silent> <leader><leader> :Files <C-r>=expand("%:h")<CR>/<CR>
+        nnoremap <silent> <leader><leader> :GFiles --exclude-standard  --others --cached <CR>
 
     "f - file
         
