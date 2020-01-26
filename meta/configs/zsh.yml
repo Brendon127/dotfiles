@@ -6,4 +6,5 @@
 - link:
     "~/.zshrc": shells/zsh/zshrc
     "~/.oh-my-zsh": shells/zsh/ohmyzsh
+    "~/.oh-my-zsh/custom/themes/synergy.zsh-theme": shells/zsh/themes/synergy.zsh-theme
 

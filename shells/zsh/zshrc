@@ -5,7 +5,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/home/brendon/.oh-my-zsh"
 export VIM_DIR="/home/brendon/.dotfiles/editors/nvim"
 
-ZSH_THEME="custom"
+ZSH_THEME="synergy"
 
 plugins=(
   git
