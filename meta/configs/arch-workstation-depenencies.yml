@@ -1,0 +1,36 @@
+- pacman:
+  - zsh
+  - neovim
+  - xorg-xrandr 
+  - feh    
+  - zsh
+  - xclip
+  - python-pywal
+  - wget
+  - picom
+  - alsa-utils
+  - pulseaudio
+  - pulseaudio-alsa
+  - pulseaudio-bluetooth
+  - tree
+  - zathura
+  - zathura-pdf-poppler
+  - redshift
+  - sxiv
+  - ranger
+  - nemo
+  - ctags
+  - rxvt-unicode
+  - urxvt-perls
+  - playerctl
+  - zip
+  - python-pip
+- pacaur:
+  - polybar 
+  - brave-bin
+  - siji-git
+  - ttf-font-awesome-4
+  - compton-tryone-git
+  - nerd-fonts-inconsolata
+  - urxvt-resize-font-git
+  - gitkraken
