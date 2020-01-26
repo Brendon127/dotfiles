@@ -25,6 +25,7 @@ PACMAN_PACKAGES=(
 	urxvt-perls
 	playerctl
 	zip
+	python-pip
 )
 AUR_PACKAGES=( 
 	polybar 
@@ -35,6 +36,8 @@ AUR_PACKAGES=(
 	nerd-fonts-inconsolata
 	urxvt-resize-font-git
 )
+
+# python3 -m pip install --user --upgrade pynvim # for vim python plugins
 
 # Install pacman packages
 sudo pacman -S --noconfirm ${PACMAN_PACKAGES[@]}
