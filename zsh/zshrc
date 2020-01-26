@@ -100,6 +100,15 @@ function cdgr() { # git commit file
     cd $git_root
 }
 
+################################################
+# useful aliases
+###############################################
+alias c=/bin/clear
+alias ping='ping -c 5'
+alias getpass="openssl rand -base64 "
+alias clear='echo use c instead'
+###############################################
+
 function cleanup() {
 	echo $1;
 	CONTAINS_LOGS=($(grep -r -n --include \*.ts console.log  | cut -d: -f1 | uniq | tail -n 3))
