@@ -1,21 +1,45 @@
 #####################################################################
+# Snippet Functions
+#####################################################################
+global !p
+def convertBody(s):
+	body = '($1 =>  {\n$2/* do stuff */\n}\n)'
+	return body
+def getWord(mtch):
+	return mtch.split('.')[0] 
+endglobal
+
+
+#####################################################################
 # General
 #####################################################################
 snippet if
 if(${1:input}) {
-	$2
-}
-$3
+	${2:/* do stuff */}
+} $3
 endsnippet
 
 snippet ife
 if(${1:input}) {
-	$3
+	${3:/* do stuff */}
 } else {
-	$2
+	${2:/* do stuff */}
 }
 $4
 endsnippet
+
+snippet el
+else {
+	${1:/* do stuff */}
+}
+endsnippet
+
+snippet eli
+else if(${1:input}) {
+	${2:/* do stuff */}
+}
+endsnippet
+
 
 snippet cw "Console warn"
 console.warn(${1:message});
@@ -29,10 +53,25 @@ catch(error) {
 	console.warn(error.message);
 }
 endsnippet
+
+
+
+snippet '([a-zA-Z]+\.fe)' "For Each" r
+`!p snip.rv = getWord(match.group(1))`.forEach(${1:item} => {
+	${2:/* do stuff */ }
+});
+endsnippet
+
+snippet '([a-zA-Z]+\.m)' "Map" r
+`!p snip.rv = getWord(match.group(1))`.map(${1:item} => {
+	${2:/* do stuff */ }
+});
+endsnippet
+
 #####################################################################
 # React Native 
 #####################################################################
-snippet rncc "React native Component"
+snippet rnc "React Native Component"
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
@@ -84,4 +123,43 @@ endsnippet
 # var ${1} = require('${1/(([a-z][A-Z])+)/\U_\E/g}');
 snippet req
 var ${1} = require('${1/([a-z]+)([A-Z][a-z]+)/\U$1_$2\E/g}');
+endsnippet
+
+
+snippet rncc "React Naitve Container"
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import ${1:ScreenName} from './${2:path}';
+
+import { ${3:actionName}  } from '../../reducers/${4:actionPath}';
+
+
+export function mapStateToProps({ ${5:name}Reducer}) {
+    return {
+		${6:/*props*/}
+	}
+}
+
+export function mapDispatchToProps(dispatch) {
+    return bindActionCreators(
+        {
+			${7:/*function*/
+        },
+        dispatch
+    );
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)($1);
+endsnippet
+
+snippet id "import default" b
+import ${1:Module} from '${2:path}';
+endsnippet
+
+snippet ii "import" b
+import {${1:Module}} from '${2:path}';
 endsnippet
