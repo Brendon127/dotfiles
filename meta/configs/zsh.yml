@@ -1,0 +1,9 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- link:
+    "~/.zshrc": shells/zsh/zshrc
+    "~/.oh-my-zsh": shells/zsh/ohmyzsh
+

@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- clean:
+  - "~"
+  - "~/.config"
+- link:
+    "~/.config/i3": windowmanager/i3
+    "~/.config/picom": windowmanager/picom
+    "~/.config/polybar": windowmanager/polybar
+    "~/.xinitrc": windowmanager/x/xinitrc
+    "~/.Xmodmap": keyboard/Xmodmap
+    "~/.screenlayout": windowmanager/screenlayout

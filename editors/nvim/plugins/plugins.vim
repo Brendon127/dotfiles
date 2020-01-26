@@ -28,10 +28,9 @@ Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
-
-source ~/.dotfiles/vim/plugins/coc.vim
-source ~/.dotfiles/vim/plugins/nerdtree.vim
-source ~/.dotfiles/vim/plugins/emmet.vim
-source ~/.dotfiles/vim/plugins/fzf.vim
-source ~/.dotfiles/vim/plugins/git-gutter.vim
-source ~/.dotfiles/vim/plugins/ultisnips.vim
+source ~/.dotfiles/editors/nvim/plugins/coc.vim
+source ~/.dotfiles/editors/nvim/plugins/nerdtree.vim
+source ~/.dotfiles/editors/nvim/plugins/emmet.vim
+source ~/.dotfiles/editors/nvim/plugins/fzf.vim
+source ~/.dotfiles/editors/nvim/plugins/git-gutter.vim
+source ~/.dotfiles/editors/nvim/plugins/ultisnips.vim
