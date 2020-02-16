@@ -1,8 +1,8 @@
 [user]
-	email = brendonvbiljoen@gmail.com
+	email = brendonvbiljoen@protonmail.com
 	name = Brendon
 [commit]
-	template = ~/.dotfiles/git/gitmessage
+	template = $home/development/git/gitmessage
 [core]
 	editor = 'nvim' 
 [mergetool]

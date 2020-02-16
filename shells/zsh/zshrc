@@ -2,8 +2,8 @@
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.7.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/brendon/.oh-my-zsh"
-export VIM_DIR="/home/brendon/.dotfiles/editors/nvim"
+export ZSH="$HOME/.oh-my-zsh"
+export VIM_DIR="$HOME/.dotfiles/editors/nvim"
 
 ZSH_THEME="synergy"
 
@@ -153,7 +153,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH=$PATH:/home/brendon/.dotfiles/scripts/bluetooth
+export PATH=$PATH:$HOME/.dotfiles/scripts/bluetooth
 export PATH=/opt/android-sdk/platform-tools/:$PATH
 
 export TERMINAL=urxvt
