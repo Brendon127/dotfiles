@@ -40,6 +40,8 @@ else if(${1:input}) {
 }
 endsnippet
 
+snippet ds "do stuff comment"
+endsnippet
 
 snippet cw "Console warn"
 console.warn(${1:message});
@@ -48,8 +50,7 @@ endsnippet
 snippet try "Try catch"
 try {
 	$0
-}
-catch(error) {
+} catch (error) {
 	console.warn(error.message);
 }
 endsnippet
@@ -77,14 +78,14 @@ import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
 export default class ${1:Component} extends React.Component {
+	static propTypes = {
+
+	};
     render() {
 		$2
 		return null;
     }
 }
-$1.propTypes = {
-
-};
 
 const styles = StyleSheet.create({
 });
@@ -109,7 +110,7 @@ export default function $1Reducer(state = initialState, action) {
 endsnippet
 
 snippet rnca "Create action"
-const ${1:setIsLoading }= new CreateAction(reducerName, '${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
+const ${1:actionName } = new CreateAction(reducerName, '${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
 export const $1Action = $1.action;
 
 case $1.actionType:
@@ -130,7 +131,7 @@ snippet rncc "React Naitve Container"
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import ${1:ScreenName} from './${2:path}';
+import ${1:ScreenName} from '${2:./path}';
 
 import { ${3:actionName}  } from '../../reducers/${4:actionPath}';
 
@@ -138,14 +139,14 @@ import { ${3:actionName}  } from '../../reducers/${4:actionPath}';
 export function mapStateToProps({ ${5:name}Reducer}) {
     return {
 		${6:/*props*/}
-	}
+	};
 }
 
 export function mapDispatchToProps(dispatch) {
     return bindActionCreators(
         {
-			${7:/*function*/
-        },
+			${7:/*function*/ }
+		},
         dispatch
     );
 }
@@ -162,4 +163,11 @@ endsnippet
 
 snippet ii "import" b
 import {${1:Module}} from '${2:path}';
+endsnippet
+
+snippet rnpt "Proptypes"
+import PropTypes from 'prop-types';
+$1.propTypes = {
+
+};
 endsnippet

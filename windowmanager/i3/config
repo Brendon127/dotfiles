@@ -225,7 +225,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # set monitors
-exec /home/.screenlayout/monitor-left.sh
+exec /home/.screenlayout/monitor-right.sh
 
 exec_always xmodmap ~/.Xmodmap
 exec_always xrdb -load ~/.Xresources
@@ -233,6 +233,8 @@ exec_always wal -i /home/brendon/pictures/wallpapers/0000018.jpg
 exec_always picom
 
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
+# start notifaction daemon
+exec --no-startup-id dunst
 
 # default_border none
 

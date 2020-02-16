@@ -31,7 +31,7 @@ let mapleader =" "
         nnoremap <silent> <leader>, :Buffers<CR>
 
     ". - browse files
-        nnoremap <silent> <leader>. :silent :Files<CR>
+        nnoremap <silent> <leader>. :silent :Files <C-r>=expand("%:h")<CR>/<CR>
 
     "SPC - browse files sibling directory
         nnoremap <silent> <leader><leader> :GFiles --exclude-standard  --others --cached <CR>
@@ -66,6 +66,8 @@ let mapleader =" "
             nnoremap <silent> <leader>gu :GitGutterUndoHunk <CR>
         "s - next hunk
             nnoremap <silent> <leader>gs :Magit<CR>
+        "b - git blame on line
+            nnoremap <silent> <leader>gb :GitBlame<CR>
 
     "s - snippets
     "w - window

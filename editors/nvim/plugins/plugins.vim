@@ -19,12 +19,14 @@ Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
 Plug 'airblade/vim-gitgutter'                           " Git gutter
 Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
+Plug 'zivyangll/git-blame.vim'                          " Shortcut to blame
 
 Plug 'SirVer/ultisnips'                                 " Snippets engine
 
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 

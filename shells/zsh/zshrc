@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.7.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/brendon/.oh-my-zsh"
@@ -41,6 +41,10 @@ fi
 alias vim="nvim"
 alias vi="nvim"
 alias subl="subl3"
+
+# Projects
+alias av="cd ~/codehesion/projects/airvantage/"
+alias avd="cd ~/codehesion/notes/airvantage/"
 
 #class codes
 alias cos341="cd $HOME/uni/cos341"
@@ -93,7 +97,11 @@ function cm () { # commit message
 
 function cf() { # git commit file
     git_root=`git rev-parse --show-toplevel`
-    git commit -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+    if [[ -z $1 ]]; then
+        git commit -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+    else
+        git commit -n -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+    fi
 }
 
 function cdgr() { # git commit file
