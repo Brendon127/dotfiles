@@ -4,6 +4,6 @@
       relink: true
       force: true
 - link:
-    "~/.gitconfig": development/git/gitconfig
+    "~/.gitconfig": development/git/gitconfig.work
     "~/.gitmessage.txt": development/git/gitmessage
 
