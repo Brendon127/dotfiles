@@ -30,6 +30,7 @@
   - light
   - man
   - bluez-utils
+  - npm
 - pacaur:
   - polybar 
   - brave-bin
