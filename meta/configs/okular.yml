@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- link:
+    "~/.local/share/kxmlgui5/okular/part.rc": apps/okular/part.rc
+    "~/.local/share/kxmlgui5/okular/shell.rc": apps/okular/shell.rc
