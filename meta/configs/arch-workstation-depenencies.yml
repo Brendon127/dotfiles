@@ -25,6 +25,11 @@
   - playerctl
   - zip
   - python-pip
+  - nodejs
+  - fzf
+  - light
+  - man
+  - bluez-utils
 - pacaur:
   - polybar 
   - brave-bin
