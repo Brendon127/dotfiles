@@ -229,7 +229,7 @@ exec /home/.screenlayout/monitor-right.sh
 
 exec_always xmodmap ~/.Xmodmap
 exec_always xrdb -load ~/.Xresources
-exec_always wal -i $HOME/pictures/wallpapers/0000018.jpg
+exec_always wal -i $WALLPAPER
 exec_always picom
 
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
