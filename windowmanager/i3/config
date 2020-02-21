@@ -225,7 +225,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # set monitors
-exec /home/.screenlayout/monitor-right.sh
+exec $HOME/.screenlayout/monitor-left.sh
 
 exec_always xmodmap ~/.Xmodmap
 exec_always xrdb -load ~/.Xresources
