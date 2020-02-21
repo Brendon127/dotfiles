@@ -8,7 +8,7 @@
 - link:
     "~/.config/nvim/UltiSnips": editors/nvim/snippets
     "~/.config/nvim/init.vim": editors/nvim/init.vim
-    "~/.config/nvim/coc-settings": editors/nvim/coc-settings.json
+    "~/.config/nvim/coc-settings.json": editors/nvim/coc-settings.json
     "~/.local/share/nvim/site/autoload/plug.vim": editors/nvim/plug.vim
 - shell:
   - [pip install --user neovim,  Installing Python 3 NeoVim plugin]
