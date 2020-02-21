@@ -128,5 +128,6 @@
   <Action name="view_scroll_up" shortcut=""/>
   <Action name="view_scroll_page_down" shortcut="Space; D"/>
   <Action name="view_scroll_page_up" shortcut="U"/>
+  <Action name="toggle_change_colors" shortcut="Ctrl+I"/>
  </ActionProperties>
 </kpartgui>
