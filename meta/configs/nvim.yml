@@ -13,6 +13,5 @@
 - shell:
   - [pip install --user neovim,  Installing Python 3 NeoVim plugin]
   - [nvim -c 'PlugClean!' -c 'PlugInstall' -c 'PlugUpdate' -c 'q' -c 'q', Installing nvim plugins]
-  - [nvim -c 'CocInstall coc-eslint' , Installing  coc eslint]
   - [npm install -g neovim,  Installing Nodejs NeoVim plugin]
 
