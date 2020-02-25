@@ -15,6 +15,7 @@ Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
 Plug 'mattn/emmet-vim'                                  " Quick html tags
 
 Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
+Plug 'pangloss/vim-javascript'
 
 Plug 'airblade/vim-gitgutter'                           " Git gutter
 Plug 'jreybert/vimagit'                                 " Magit for vim :D
@@ -27,6 +28,8 @@ Plug 'SirVer/ultisnips'                                 " Snippets engine
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'sickill/vim-monokai'
+
 
 call plug#end()
 
