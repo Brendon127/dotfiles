@@ -4,6 +4,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-java', 
+  \ 'coc-solargraph', 
   \ ]
 
 set updatetime=0
