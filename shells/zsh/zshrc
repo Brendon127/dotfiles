@@ -135,7 +135,7 @@ function cleanup() {
 alias r='ranger'
 alias v='nvim'
 alias z='zathura --fork'
-alias t='urxvt 2> /dev/null &|'
+alias t='$TERMINAL 2> /dev/null &|'
 alias o='okular'
 ###############################################
 #
@@ -157,7 +157,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.dotfiles/scripts/bluetooth
 export PATH=/opt/android-sdk/platform-tools/:$PATH
 
-export TERMINAL=urxvt
+export TERMINAL=terminator
 ################################################
 # SCRIPTS FOLDER
 ###############################################
