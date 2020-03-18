@@ -1,0 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- clean:
+  - "~/.config/terminator"
+- link:
+    "~/.config/terminator/config": apps/terminator/config
+
