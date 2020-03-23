@@ -101,39 +101,58 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-
+# Pause music when discord mic is set to active (Page up)
+bindcode $mod+112 exec playerctl pause
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $terminal-1 "1" 
-set $terminal-2 "2" 
-set $browser "3" 
-set $pdf "4" 
+set $terminal-1 "term-1" 
+set $terminal-2 "term-2" 
+set $browser "browser" 
+set $chat1 "discord" 
+set $chat2 "slack" 
+set $chat3 "skype" 
+set $chat4 "thunderbird" 
+set $dev-app "dev-app" 
+set $music "music" 
+
+
+set $ws1 "1" 
+set $ws2 "2" 
+set $ws3 "3" 
+set $ws4 "4" 
 set $ws5 "5"
-set $ws6 "6"
-set $dev "7"
-set $chat "8"
-set $ws9 "9"
-set $music "10" 
+
 
 # Which screens workspaces start on
 set $laptop-screen eDP-1
 set $monitor-0 HDMI-1
+
 workspace $terminal-1 output $monitor-0 $laptop-screen
 workspace $terminal-2 output $laptop-screen
-workspace $browser output $monitor-0 $laptop-screen 
-workspace $pdf output $monitor-0 $laptop-screen 
+workspace $browser output $laptop-screen $monitor-0
+workspace $ws4 output $monitor-0 $laptop-screen 
 workspace $music output $laptop-screen 
+
+workspace $chat1 output $laptop-screen 
+
+workspace $chat1 output $laptop-screen 
+workspace $chat2 output $laptop-screen 
+workspace $chat3 output $laptop-screen 
+workspace $chat3 output $laptop-screen 
+workspace $dev-app output $laptop-screen 
 
 # Set windows to start on specific workspace
 assign[class="Brave-browser"] $browser
-assign[class="Thunderbird"] $chat
-assign[class="Slack"] $chat
+assign[class="discord"] $chat1
+assign[class="Slack"] $chat2
+assign[class="skype"] $chat3
+assign[class="Thunderbird"] $chat4
+assign[class="spotify"] $music
 for_window [class="Spotify"] move to workspace $music
-for_window [title="Android Emulator - Pixel_2_API_28:5554"] floating enable move to workspace $dev
-for_window [title="Emulator"] floating enable move to workspace $dev
-for_window [class="Slack"] layout stacking
-for_window [class="Thunderbird"] layout stacking
+
+# for_window [title="Android Emulator - Pixel_2_API_28:5554"] floating enable move to workspace $dev
+# for_window [title="Emulator"] floating enable move to workspace $dev
 
 # Move entire workspace to another screen
 bindsym $mod+F1 move workspace to output $laptop-screen
@@ -143,34 +162,43 @@ bindsym $mod+F2 move workspace to output $monitor-0
 bindsym $mod+t split toggle
 
 # switch to workspace
-bindsym $mod+1 workspace $terminal-1
-bindsym $mod+2 workspace $terminal-2
-bindsym $mod+3 workspace $browser
-bindsym $mod+4 workspace $pdf
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $dev
-bindsym $mod+8 workspace $chat
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $music
+
+bindsym $mod+b workspace $browser
+bindsym $mod+n workspace $dev-app
+bindsym $mod+m workspace $music
+# mod+,
+bindcode $mod+59 workspace $terminal-1
+# mod+.
+bindcode $mod+60 workspace $terminal-2
+
+bindsym $mod+F5 workspace $chat1
+bindsym $mod+F6 workspace $chat2
+bindsym $mod+F7 workspace $chat3
+bindsym $mod+F8 workspace $chat4
+
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $terminal-1
-bindsym $mod+Shift+2 move container to workspace $terminal-2
-bindsym $mod+Shift+3 move container to workspace $browser
-bindsym $mod+Shift+4 move container to workspace $pdf
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $dev
-bindsym $mod+Shift+8 move container to workspace $chat
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $music
 
-#open programs with keybindings
-bindsym $mod+b exec brave
-bindsym $mod+m exec spotify
-bindsym $mod+F5 exec thunderbird
-bindsym $mod+F6 exec slack
+bindsym $mod+Shift+b move container to workspace $browser
+bindsym $mod+Shift+n move container to workspace $dev-app
+bindsym $mod+Shift+m move container to workspace $music
+bindcode $mod+Shift+59  move container to workspace $terminal-1
+bindcode $mod+Shift+60  move container to workspace $terminal-2
+
+bindsym $mod+Shift+F5 move container to workspace $chat1
+bindsym $mod+Shift+F6 move container to workspace $chat2
+bindsym $mod+Shift+F7 move container to workspace $chat3
+bindsym $mod+Shift+F8 move container to workspace $chat4
 
 bindsym $mod+F10 exec $HOME/.screenlayout/laptop-screen.sh
 bindsym $mod+F11 exec $HOME/.screenlayout/monitor-left.sh
@@ -230,7 +258,7 @@ exec $HOME/.screenlayout/monitor-left.sh
 exec_always xmodmap ~/.Xmodmap
 exec_always xrdb -load ~/.Xresources
 exec_always wal -i $WALLPAPER
-exec_always picom
+exec_always picom -b
 
 exec_always --no-startup-id  ~/.config/polybar/launch.sh
 # start notifaction daemon
@@ -241,4 +269,4 @@ exec --no-startup-id dunst
 # gaps
 
 gaps inner 15
-gaps outer 15
+gaps outer 30
