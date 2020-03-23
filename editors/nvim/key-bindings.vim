@@ -80,7 +80,12 @@ let mapleader =" "
     "/ - search
         " f -function
             nnoremap <silent> <leader>/f :BTags <CR>
-
+        " c - Find controllers
+            nnoremap <silent> <leader>/c :GFiles --exclude-standard --others --cached  $(git rev-parse --show-toplevel)/app/controllers <CR>
+        " m - Find models
+            nnoremap <silent> <leader>/m :GFiles --exclude-standard --others --cached  $(git rev-parse --show-toplevel)/app/models <CR>
+        " v - Find Views
+            nnoremap <silent> <leader>/v :GFiles --exclude-standard --others --cached  $(git rev-parse --show-toplevel)/app/views <CR>
 
 " ====================================================================================
 
