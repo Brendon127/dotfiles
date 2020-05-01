@@ -2,7 +2,8 @@
 syntax enable " Enable syntax highlighting
 
 " colorsheme 
-colorscheme monokai
+colorscheme onedark
+set termguicolors
 " Spacing
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
@@ -12,6 +13,7 @@ set autoindent
 set copyindent
 
 " UI
+set number
 set  relativenumber
 set showcmd
 filetype indent on " load filetype-specific indent files
