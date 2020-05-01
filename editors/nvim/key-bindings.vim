@@ -29,6 +29,9 @@ let mapleader =" "
 " SPC
     ", - switch buffers
         nnoremap <silent> <leader>, :Buffers<CR>
+    "y - yank to system clipboard
+        nnoremap <leader>y "+y
+        vmap <leader>y "+y
 
     ". - browse files
         nnoremap <silent> <leader>. :silent :Files <C-r>=expand("%:h")<CR>/<CR>
