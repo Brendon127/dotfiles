@@ -155,8 +155,8 @@ for_window [class="Spotify"] move to workspace $music
 # for_window [title="Emulator"] floating enable move to workspace $dev
 
 # Move entire workspace to another screen
-bindsym $mod+F1 move workspace to output $laptop-screen
-bindsym $mod+F2 move workspace to output $monitor-0
+bindsym $mod+F1 move workspace to output $monitor-0
+bindsym $mod+F2 move workspace to output $laptop-screen
 
 # split toggle
 bindsym $mod+t split toggle
