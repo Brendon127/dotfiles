@@ -14,22 +14,24 @@ Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
 
 Plug 'mattn/emmet-vim'                                  " Quick html tags
 
-Plug 'MaxMEllon/vim-jsx-pretty'                         " Pretty syntax for jsx
-Plug 'pangloss/vim-javascript'
-Plug 'slim-template/vim-slim'
+Plug 'sheerun/vim-polyglot'                                  " Quick html tags
 
 Plug 'airblade/vim-gitgutter'                           " Git gutter
 Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
 Plug 'zivyangll/git-blame.vim'                          " Shortcut to blame
-
+Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'                                 " Snippets engine
+
+Plug 'vim-airline/vim-airline'                                 
 
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
+Plug 'joshdick/onedark.vim'
+
 
 
 call plug#end()
@@ -40,3 +42,4 @@ source ~/.dotfiles/editors/nvim/plugins/emmet.vim
 source ~/.dotfiles/editors/nvim/plugins/fzf.vim
 source ~/.dotfiles/editors/nvim/plugins/git-gutter.vim
 source ~/.dotfiles/editors/nvim/plugins/ultisnips.vim
+source ~/.dotfiles/editors/nvim/plugins/airline.vim
