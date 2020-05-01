@@ -12,7 +12,7 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
 " Hide executable files
-let NERDTreeIgnore = ['\.pyc$', '\.o', '\.class', '\.zip', 'exe']
+" let NERDTreeIgnore = ['\.pyc$', '\.o', '\.class', '\.zip', 'exe']
 
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
