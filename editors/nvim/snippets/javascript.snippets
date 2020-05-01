@@ -110,7 +110,7 @@ export default function $1Reducer(state = initialState, action) {
 endsnippet
 
 snippet rnca "Create action"
-const ${1:actionName } = new CreateAction(reducerName, '${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
+const ${1:actionName } = createAction('${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
 export const $1Action = $1.action;
 
 case $1.actionType:
