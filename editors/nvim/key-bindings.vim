@@ -53,6 +53,8 @@ let mapleader =" "
                 nnoremap <silent> <leader>oz :e ~/.dotfiles/zsh/<CR>
         " s - snippets
                 nnoremap <silent> <leader>os :UltiSnipsEdit<CR>
+        " d - File in NERDTree
+                nnoremap <silent> <leader>od :NERDTreeFind <CR>
                 
     "p - project
     "g - git
