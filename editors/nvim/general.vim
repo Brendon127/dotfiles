@@ -13,6 +13,7 @@ set autoindent
 set copyindent
 
 " UI
+set number
 set  relativenumber
 set showcmd
 filetype indent on " load filetype-specific indent files
