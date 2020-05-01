@@ -11,6 +11,7 @@ Plug 'tpope/vim-commentary'                             " Easy comments with gcc
 Plug 'tpope/vim-surround'                               " Easy surround
 
 Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
+Plug 'bkad/CamelCaseMotion'                             " Navigate camel case
 
 Plug 'mattn/emmet-vim'                                  " Quick html tags
 
@@ -25,11 +26,14 @@ Plug 'zivyangll/git-blame.vim'                          " Shortcut to blame
 
 Plug 'SirVer/ultisnips'                                 " Snippets engine
 
+Plug 'terryma/vim-multiple-cursors'
+
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sickill/vim-monokai'
+
 
 
 call plug#end()
@@ -40,3 +44,4 @@ source ~/.dotfiles/editors/nvim/plugins/emmet.vim
 source ~/.dotfiles/editors/nvim/plugins/fzf.vim
 source ~/.dotfiles/editors/nvim/plugins/git-gutter.vim
 source ~/.dotfiles/editors/nvim/plugins/ultisnips.vim
+source ~/.dotfiles/editors/nvim/plugins/camel-case.vim
