@@ -19,6 +19,7 @@ set showcmd
 filetype indent on " load filetype-specific indent files
 set wildmenu
 set showmatch
+set cursorline
 
 " Search
 set incsearch " search as characters are entered
