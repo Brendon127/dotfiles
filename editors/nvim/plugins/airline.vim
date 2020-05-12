@@ -29,3 +29,20 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+function! AirlineInit()
+  " first define a new part for modified
+  call airline#parts#define('modified', {
+    \ 'raw': '%m',
+    \ 'accent': 'red',
+    \ })
+
+  " then override the default layout for section c with your new part
+  let g:airline_section_c = airline#section#create(['%<', '%f', 'modified', ' ', 'readonly'])
+  let g:airline_section_y = ""
+
+  " let g:airline#extensions#default#layout = ['a', 'b', 'c', 'x', 'z']
+endfunction
+autocmd VimEnter * call AirlineInit()
+
+let g:airline#extensions#hunks#enabled=0

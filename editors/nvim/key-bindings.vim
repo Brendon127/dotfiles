@@ -8,9 +8,6 @@ nnoremap k gk
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
 " ====================================================================================
 
 " =========
@@ -25,6 +22,21 @@ nnoremap <C-k> 3<C-y>
 " ============
 " Space Leader
 " ============
+"
+function! EchoWarning(msg)
+  echohl ErrorMsg
+  echo "Error"
+  echohl None
+  echon ': ' a:msg
+endfunction
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+call EchoWarning('test')
 let mapleader =" "
 " SPC
     ", - switch buffers
@@ -38,11 +50,16 @@ let mapleader =" "
 
     "SPC - browse files sibling directory
         nnoremap <silent> <leader><leader> :GFiles --exclude-standard  --others --cached <CR>
+    "s - save
+        nnoremap <silent> <leader>sa :wa <CR>
+        nnoremap <silent> <leader>ss :w <CR>
+        " force to learn new map
+        cmap w call EchoWarning("stoppit, use the corrent key binding") <CR>
 
     "f - file
-        
+
     "o - open
-        " t -terminal 
+        " t -terminal
                 nnoremap <silent> <leader>ot :silent exec "!$TERMINAL&" <CR>
         " p -project (NERDTree)
                 nnoremap <silent> <leader>op :NERDTreeToggle<CR>
