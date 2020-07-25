@@ -6,7 +6,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export ZSH="$HOME/.oh-my-zsh"
 export VIM_DIR="$HOME/.dotfiles/editors/nvim"
-export WALLPAPER=$HOME/pictures/wallpapers/0000020.jpg
+export WALLPAPER=$HOME/pictures/wallpapers/0000021.jpg
 
 ZSH_THEME="synergy"
 
