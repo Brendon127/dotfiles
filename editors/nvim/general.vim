@@ -20,6 +20,7 @@ filetype indent on " load filetype-specific indent files
 set wildmenu
 set showmatch
 set cursorline
+set hidden
 
 " Search
 set incsearch " search as characters are entered

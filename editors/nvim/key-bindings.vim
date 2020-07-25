@@ -51,11 +51,8 @@ let mapleader =" "
     "SPC - browse files sibling directory
         nnoremap <silent> <leader><leader> :GFiles --exclude-standard  --others --cached <CR>
     "s - save
-        nnoremap <silent> <leader>sa :wa <CR>
-        nnoremap <silent> <leader>ss :w <CR>
-        " force to learn new map
-        cmap w call EchoWarning("stoppit, use the corrent key binding") <CR>
-
+        nnoremap <silent> <leader>a :wa <CR>
+        nnoremap <silent> <leader>s :w <CR>
     "f - file
 
     "o - open
@@ -75,7 +72,7 @@ let mapleader =" "
                 nnoremap <silent> <leader>os :UltiSnipsEdit<CR>
         " d - File in NERDTree
                 nnoremap <silent> <leader>od :NERDTreeFind <CR>
-                
+
     "p - project
     "g - git
         "n - next hunk
@@ -99,6 +96,8 @@ let mapleader =" "
                 nnoremap <silent> <leader>cd <C-]>
         " l -jump to definition
                 nnoremap <silent> <leader>cl :CocCommand eslint.executeAutofix <CR> :w <CR>
+        " i - Fix indentation
+                nnoremap <silent> <leader>ci gg=G<C-o>
     "/ - search
         " f -function
             nnoremap <silent> <leader>/f :BTags <CR>

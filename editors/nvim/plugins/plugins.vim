@@ -25,6 +25,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'                                 " Snippets engine
 
 Plug 'terryma/vim-multiple-cursors'
+Plug 'pseewald/vim-anyfold'                             " Code folding
+
 
 Plug 'vim-airline/vim-airline'                                 
 
@@ -47,3 +49,4 @@ source ~/.dotfiles/editors/nvim/plugins/git-gutter.vim
 source ~/.dotfiles/editors/nvim/plugins/ultisnips.vim
 source ~/.dotfiles/editors/nvim/plugins/camel-case.vim
 source ~/.dotfiles/editors/nvim/plugins/airline.vim
+source ~/.dotfiles/editors/nvim/plugins/anyfold.vim
