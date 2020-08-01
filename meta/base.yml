@@ -5,7 +5,7 @@
       force: true
     yum:
       options: "-q -y"
-      stdout: False
+      stdout: True
       stderr: True
 
 - clean:
