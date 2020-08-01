@@ -34,4 +34,4 @@ set undodir=~/.vim/undodir
 
 " File specific configs
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab                " indentation for yml files 
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab                " indentation for js files 
+autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab                " indentation for js files 
