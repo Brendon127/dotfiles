@@ -3,6 +3,11 @@
       create: true
       relink: true
       force: true
+    yum:
+      options: "-q -y"
+      stdout: False
+      stderr: True
+
 - clean:
   - "~"
   - "~/.config"

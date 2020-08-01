@@ -7,3 +7,6 @@
 [submodule "meta/dotbot-pacaur"]
 	path = meta/dotbot-pacaur
 	url = https://github.com/ajlende/dotbot-pacaur.git
+[submodule "meta/dotbot-yum2"]
+	path = meta/dotbot-yum2
+	url = https://gitlab.com/flyingchipmunk/dotbot-yum.git
