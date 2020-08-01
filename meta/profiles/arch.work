@@ -1,6 +1,7 @@
+arch-workstation-depenencies
+zsh
 nvim
 i3
 git.work
-zsh
 zathura
-urxvt
+terminator

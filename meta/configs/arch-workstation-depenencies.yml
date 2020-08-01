@@ -1,7 +1,5 @@
 - pacman:
-  - zsh
   - neovim
-  - xorg-xrandr 
   - feh    
   - zsh
   - xclip
@@ -20,8 +18,6 @@
   - ranger
   - nemo
   - ctags
-  - rxvt-unicode
-  - urxvt-perls
   - playerctl
   - zip
   - python-pip
@@ -32,13 +28,15 @@
   - bluez-utils
   - npm
   - noto-fonts-emoji
+  - thunderbird
+  - pavucontrol
 - pacaur:
-  - polybar 
-  - brave-bin
+  - xorg-xrandr
+  - polybar
   - siji-git
   - ttf-font-awesome-4
-  - compton-tryone-git
+  - ttf-font-awesome-5
   - nerd-fonts-inconsolata
-  - urxvt-resize-font-git
   - gitkraken
-  - spotify
+  - ttf-monaco
+  - brave-bin
