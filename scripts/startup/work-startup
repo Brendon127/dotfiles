@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+discord &> /dev/null &|
+slack &> /dev/null &|
+thunderbird &> /dev/null &|
+brave &> /dev/null &|
+spotify &> /dev/null &|

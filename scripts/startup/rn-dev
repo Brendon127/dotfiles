@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+i3-msg "workspace 5; append_layout ~/.dotfiles/windowmanager/i3/react-native-dev.json"
+terminator  --working-directory=$PROJECT --title="react-native-npm"
+terminator  --working-directory=$PROJECT --title="react-native-android"
+terminator  --working-directory=$PROJECT --title="emulator"
