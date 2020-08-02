@@ -213,8 +213,38 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+mode "app-launch" {
+
+        bindsym b exec brave; mode "default"
+        bindsym m exec spotify; mode "default"
+        bindsym d exec discord; mode "default"
+        bindsym s exec slack; mode "default"
+
+        # back to normal: Enter or Escape or $mod+o
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+o mode "default"
+}
+bindsym $mod+o mode "app-launch"
+
+mode "chat-apps" {
+        bindsym d workspace $chat1; mode "default"
+        bindsym Shift+d move container to workspace $chat1; mode "default"
+        bindsym s workspace $chat2; mode "default"
+        bindsym Shift+s move container to workspace $chat2; mode "default"
+        bindsym t workspace $chat4; mode "default"
+        bindsym Shift+t move container to workspace $chat4; mode "default"
+
+        # back to normal: Enter or Escape or $mod+o
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+c mode "default"
+}
+bindsym $mod+c mode "chat-apps"
+
+
 
 # Media Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.dotfiles/scripts/i3-controls/volume-up
