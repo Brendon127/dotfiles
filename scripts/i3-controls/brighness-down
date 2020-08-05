@@ -1,0 +1,1 @@
+brightnessctl --device="intel_backlight" --min-value=1 set 10%-

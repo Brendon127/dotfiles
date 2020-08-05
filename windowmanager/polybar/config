@@ -122,9 +122,9 @@ cursor-scroll = ns-resize
 
 [bar/top-right]
 monitor = ${env:MONITOR:eDP-1}
-width = 13%
+width = 18%
 height = 32
-offset-x = 86.5%
+offset-x = 80.5%
 offset-y = 0.5%
 radius = 6.0
 fixed-center = false
@@ -155,7 +155,7 @@ font-3 = siji:pixelsize=10;1
 
 ; modules-left = date
 ; modules-center = mpd
-modules-right = wlan cpu memory
+modules-right = wlan cpu memory battery
 
 tray-position = none
 tray-padding = 1
@@ -312,14 +312,14 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-; format-prefix = ""
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -446,7 +446,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 full-at = 98
 
@@ -455,8 +455,8 @@ label-discharging = %percentage%
 
 format-charging = <label-charging>
 format-charging-underline = ${colors.deep}
-
-format-discharging = <label-discharging>
+format-discharging-prefix = ""
+format-discharging = <label-discharging>%
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = "BAT:"

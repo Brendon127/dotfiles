@@ -30,12 +30,13 @@
   - noto-fonts-emoji
   - thunderbird
   - pavucontrol
+  - ttf-font-awesome
+  - brightnessctl
 - pacaur:
   - xorg-xrandr
   - polybar
   - siji-git
   - ttf-font-awesome-4
-  - ttf-font-awesome-5
   - nerd-fonts-inconsolata
   - gitkraken
   - ttf-monaco
