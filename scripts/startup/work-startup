@@ -3,5 +3,7 @@
 discord &> /dev/null &|
 slack &> /dev/null &|
 thunderbird &> /dev/null &|
+skypeforlinux &> /dev/null &|
+
 brave &> /dev/null &|
 spotify &> /dev/null &|

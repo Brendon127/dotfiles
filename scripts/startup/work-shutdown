@@ -5,3 +5,4 @@ pkill -TERM slack
 pkill -TERM thunderbird 
 pkill -TERM brave 
 pkill -TERM spotify
+pkill -TERM skype

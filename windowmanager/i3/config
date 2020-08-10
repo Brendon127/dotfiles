@@ -119,17 +119,28 @@ workspace $chat3 output $laptop-screen
 workspace $chat4 output $laptop-screen 
 workspace $dev-app output $laptop-screen 
 
+workspace $ws2 output $monitor-1 $laptop-screen
+workspace $ws3 output $monitor-1 $laptop-screen
+workspace $ws5 output $monitor-1 $laptop-screen
+workspace $ws6 output $monitor-1 $laptop-screen
+
 # Set windows to start on specific workspace
 assign[class="Brave-browser"] $browser
 assign[class="discord"] $chat1
 assign[class="Slack"] $chat2
-assign[class="skype"] $chat3
+assign[class="Skype"] $chat3
 assign[class="Thunderbird"] $chat4
 assign[class="spotify"] $music
+
+assign[class="Postman"] $ws2
+assign[class="GitKraken"] $ws3
+
 for_window [class="Spotify"] move to workspace $music
 
-for_window [title="Android Emulator - Pixel_2_API_30:5554"] floating enable move to workspace $dev-app
+for_window [title="Android Emulator - Pixel_2:5554"] floating enable move to workspace $dev-app
 for_window [title="Emulator"] floating enable move to workspace $dev-app
+
+for_window [title="React Native Debugger - Brave"] move to workspace $ws6
 
 # Move entire workspace to another screen
 bindsym $mod+F1 move workspace to output $laptop-screen
@@ -158,10 +169,6 @@ bindcode $mod+59 workspace $terminal-1
 # mod+.
 bindcode $mod+60 workspace $terminal-2 
 
-bindsym $mod+F5 workspace $chat1
-bindsym $mod+F6 workspace $chat2
-bindsym $mod+F7 workspace $chat3
-bindsym $mod+F8 workspace $chat4
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -179,11 +186,6 @@ bindsym $mod+Shift+n move container to workspace $dev-app
 bindsym $mod+Shift+m move container to workspace $music
 bindcode $mod+Shift+59  move container to workspace $terminal-1
 bindcode $mod+Shift+60  move container to workspace $terminal-2
-
-bindsym $mod+Shift+F5 move container to workspace $chat1
-bindsym $mod+Shift+F6 move container to workspace $chat2
-bindsym $mod+Shift+F7 move container to workspace $chat3
-bindsym $mod+Shift+F8 move container to workspace $chat4
 
 bindsym $mod+F9 exec $HOME/.screenlayout/laptop-screen.sh
 bindsym $mod+F10 exec $HOME/.screenlayout/monitor-left.sh
@@ -221,6 +223,9 @@ mode "app-launch" {
         bindsym m exec spotify; mode "default"
         bindsym d exec discord; mode "default"
         bindsym s exec slack; mode "default"
+        bindsym k exec skypeforlinux; mode "default"
+        bindsym g exec gitkraken; mode "default"
+        bindsym p exec postman; mode "default"
 
         # back to normal: Enter or Escape or $mod+o
         bindsym Return mode "default"
@@ -234,6 +239,8 @@ mode "chat-apps" {
         bindsym Shift+d move container to workspace $chat1; mode "default"
         bindsym s workspace $chat2; mode "default"
         bindsym Shift+s move container to workspace $chat2; mode "default"
+        bindsym k workspace $chat3; mode "default"
+        bindsym Shift+k move container to workspace $chat3; mode "default"
         bindsym t workspace $chat4; mode "default"
         bindsym Shift+t move container to workspace $chat4; mode "default"
 

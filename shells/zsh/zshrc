@@ -1,12 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$HOME/.gem/ruby/2.7.0/bin:$PATH
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
 export ZSH="$HOME/.oh-my-zsh"
 export VIM_DIR="$HOME/.dotfiles/editors/nvim"
-export WALLPAPER=$HOME/pictures/wallpapers/0000021.jpg
+export WALLPAPER=$HOME/pictures/003.jpg
 
 ZSH_THEME="synergy"
 
@@ -157,6 +151,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$HOME/.dotfiles/scripts/bluetooth
+export PATH=$PATH:$HOME/.dotfiles/scripts/startup
 export PATH=/opt/android-sdk/platform-tools/:$PATH
 
 export TERMINAL=terminator
@@ -208,8 +203,6 @@ autoload -U compinit
 compinit
 
 
-export GEM_HOME=$HOME/.rubygems/
-
 # NPM packages in homedir
 NPM_PACKAGES="$HOME/.npm-packages"
    
@@ -223,3 +216,8 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
    
 # Tell Node about these packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
