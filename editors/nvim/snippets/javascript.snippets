@@ -112,6 +112,7 @@ endsnippet
 snippet rnca "Create action"
 const ${1:actionName } = CreateAction(reducerName, '${1/([a-z]*)([A-Z][a-z]*)/\U$1_$2\E/g}');
 export const $1Action = $1.action;
+export const $1ActionType = $1.actionType;
 
 case $1.actionType:
 	return {
