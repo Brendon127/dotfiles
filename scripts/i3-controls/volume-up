@@ -1,1 +1,9 @@
-pactl set-sink-volume 0 +5%
+#!/bin/bash
+set -x
+if pactl list sinks short | grep bluez ; then
+    sink=$(pactl list sinks short | grep bluez | cut -c 1)
+    pactl set-sink-volume $sink +5%
+else
+    pactl set-sink-volume 0 +5%
+fi
+
