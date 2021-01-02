@@ -1,9 +1,14 @@
 #!/usr/bin/env zsh
 
-discord &> /dev/null &|
 slack &> /dev/null &|
 thunderbird &> /dev/null &|
 skypeforlinux &> /dev/null &|
 
 brave &> /dev/null &|
 spotify &> /dev/null &|
+zulip &> /dev/null &|
+
+blueman-applet &> /dev/null &|
+
+docker start my-redis postgres_db
+

@@ -1,5 +1,6 @@
 #/bin/bash
-DRIVE="/mnt/arch-usb/backups"
+
+DRIVE="/mnt/arch-usb/backup"
 DATE=`date +%Y_%m_%d_%H-%M`
 SOURCE="/"
 DEST="${DRIVE}/${DATE}"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+
+tmux new -s peermont -d -n peermont-mobile > /dev/null
+tmux neww -s peermont -d -n peermont-mobile-terminals > /dev/null
+

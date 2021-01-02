@@ -1,8 +1,9 @@
 #!/usr/bin/env zsh
 
-pkill -TERM Discord 
 pkill -TERM slack 
 pkill -TERM thunderbird 
 pkill -TERM brave 
 pkill -TERM spotify
 pkill -TERM skype
+pkill -TERM zulip
+pkill -TERM blueman-applet
