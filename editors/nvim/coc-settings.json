@@ -1,11 +1,18 @@
 {
   "suggest.echodocSupport": true,
-  "suggest.maxCompleteItemCount": 20,
   "coc.preferences.formatOnSaveFiletypes": ["json"],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
-  "suggest.numberSelect": true,
-  "suggest.noselect": false
+  "suggest.numberSelect": false,
+  "suggest.noselect": false,
+  "typescript.suggest.autoImports": true,
+  "javascript.suggestionActions.enabled": false
 }

@@ -5,24 +5,23 @@
 nnoremap j gj
 nnoremap k gk
 
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-" ====================================================================================
-
 " =========
 " Scrolling
 " =========
-nnoremap <C-j> 3<C-e>
-nnoremap <C-k> 3<C-y>
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 " ====================================================================================
-"
+" =========
+" Splits
+" =========
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-"
-" ============
-" Space Leader
-" ============
-"
+" set splitbelow
+" set splitright
+
 function! EchoWarning(msg)
   echohl ErrorMsg
   echo "Error"
@@ -36,8 +35,15 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
-call EchoWarning('test')
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <A-CR> <CR><C-o>==<C-o>O
+
+" ============
+" Space Leader
+" ============
+"
 let mapleader =" "
+
 " SPC
     ", - switch buffers
         nnoremap <silent> <leader>, :Buffers<CR>
@@ -51,8 +57,8 @@ let mapleader =" "
     "SPC - browse files sibling directory
         nnoremap <silent> <leader><leader> :GFiles --exclude-standard  --others --cached <CR>
     "s - save
-        nnoremap <silent> <leader>a :wa <CR>
-        nnoremap <silent> <leader>s :w <CR>
+        " nnoremap <silent> <leader>a :wa <CR>
+        " nnoremap <silent> <leader>s :w <CR>
     "f - file
 
     "o - open
@@ -93,12 +99,26 @@ let mapleader =" "
         nnoremap <silent> <leader>w <C-w>
     "c - code
         " d -jump to definition
-                nnoremap <silent> <leader>cd <C-]>
+                " nnoremap <silent> <leader>cd <C-]>
+                nmap <leader>cd <Plug>(coc-definition)
         " l -jump to definition
                 nnoremap <silent> <leader>cl :CocCommand eslint.executeAutofix <CR> :w <CR>
         " i - Fix indentation
                 nnoremap <silent> <leader>ci gg=G<C-o>
+        " a - Code Action
+                nmap <leader>ca <Plug>(coc-codeaction)
+                " nmap <leader>do <Plug>(coc-codeaction)
+        " v - Jump to view
+                nmap <leader>cv :Eview <CR>
+        " c - Jump to controller
+                nmap <leader>cc :Econtroller
+        " m - Jump to model
+                nmap <leader>cc :Emodel
+
     "/ - search
+        " g global
+            nnoremap <leader>/g :Ack!<Space>
+
         " f -function
             nnoremap <silent> <leader>/f :BTags <CR>
         " c - Find controllers
@@ -109,4 +129,3 @@ let mapleader =" "
             nnoremap <silent> <leader>/v :GFiles --exclude-standard --others --cached  $(git rev-parse --show-toplevel)/app/views <CR>
 
 " ====================================================================================
-

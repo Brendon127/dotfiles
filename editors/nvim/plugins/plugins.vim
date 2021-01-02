@@ -1,7 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Autocompletion
-Plug 'junegunn/fzf.vim'                                 " Fuzy search
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'                              " File explorer
 
 Plug 'ryanoasis/vim-devicons'                           " icons in NERDTree
@@ -11,11 +12,12 @@ Plug 'tpope/vim-commentary'                             " Easy comments with gcc
 Plug 'tpope/vim-surround'                               " Easy surround
 
 Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
+" Plug 'Raimondi/delimitMate'
 Plug 'bkad/CamelCaseMotion'                             " Navigate camel case
 
 Plug 'mattn/emmet-vim'                                  " Quick html tags
 
-Plug 'sheerun/vim-polyglot'                                  " Quick html tags
+Plug 'sheerun/vim-polyglot'                             " Mutli language support
 
 Plug 'airblade/vim-gitgutter'                           " Git gutter
 Plug 'jreybert/vimagit'                                 " Magit for vim :D
@@ -27,8 +29,9 @@ Plug 'SirVer/ultisnips'                                 " Snippets engine
 Plug 'terryma/vim-multiple-cursors'
 Plug 'pseewald/vim-anyfold'                             " Code folding
 
-
 Plug 'vim-airline/vim-airline'                                 
+
+Plug 'tpope/vim-rails'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -50,3 +53,4 @@ source ~/.dotfiles/editors/nvim/plugins/ultisnips.vim
 source ~/.dotfiles/editors/nvim/plugins/camel-case.vim
 source ~/.dotfiles/editors/nvim/plugins/airline.vim
 source ~/.dotfiles/editors/nvim/plugins/anyfold.vim
+source ~/.dotfiles/editors/nvim/plugins/ack.vim
