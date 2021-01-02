@@ -111,7 +111,7 @@ modules-left = date
 ; modules-center = mpd
 modules-right = time
 
-tray-position = 
+tray-position = none
 tray-padding = 1
 
 ;wm-restack = i3
@@ -249,6 +249,7 @@ ws-icon-15 = 6;6
 ws-icon-16 = 7;7
 ws-icon-17 = 8;8
 ws-icon-18 = 9;9
+ws-icon-19 = zulip;z
 ws-icon-default = TRM
 
 label-mode-padding = 2
@@ -312,7 +313,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = ""
+; format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
 label = %percentage_used%%
