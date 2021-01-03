@@ -36,6 +36,9 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular
+font-4 = FontAwesome:fontformat=truetype:size=8:antialias=true;0
+
 
 modules-left = i3
 modules-center = 
@@ -74,6 +77,8 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular
+font-4 = FontAwesome:fontformat=truetype:size=8:antialias=true;0
 
 modules-left = i3
 modules-center = 
@@ -99,6 +104,14 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+font-3 = Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular
+font-4 = FontAwesome:fontformat=truetype:size=8:antialias=true;0
+
+
+
 line-size = 3
 line-color = #f00
 
@@ -110,10 +123,6 @@ padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
-
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
@@ -164,29 +173,51 @@ wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
+ws-icon-0 = term-1;
+ws-icon-1 = term-2;
+ws-icon-2 = browser;
+ws-icon-3 = discord;
+ws-icon-4 = slack;
+ws-icon-5 = skype;
+ws-icon-6 = thunderbird;
+ws-icon-7 = music;
+ws-icon-8 = music;
+ws-icon-9 = dev-app;
+ws-icon-10 = 1;1
+ws-icon-11 = 2;2
+ws-icon-12 = 3;3
+ws-icon-13 = 4;4
+ws-icon-14 = 5;5
+ws-icon-15 = 6;6
+ws-icon-16 = 7;7
+ws-icon-17 = 8;8
+ws-icon-18 = 9;9
+ws-icon-19 = zulip;z
+ws-icon-default = TRM
+
 
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
