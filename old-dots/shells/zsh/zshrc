@@ -1,0 +1,234 @@
+export ZSH="$HOME/.oh-my-zsh"
+export VIM_DIR="$HOME/.dotfiles/editors/nvim"
+export WALLPAPER=$HOME/pictures/003.jpg
+DISABLE_AUTO_UPDATE="true"
+
+ZSH_THEME="synergy"
+
+plugins=(
+  git
+  colored-man-pages
+  docker
+  docker-compose
+)
+
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export MANPATH="/usr/local/man:$MANPATH"
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+################################################################
+# Custom Alias
+################################################################
+#
+
+# source ./env
+
+
+# Change cursor shape for different vi modes.
+
+alias vim="nvim"
+alias vi="nvim"
+alias subl="subl3"
+
+# Projects
+alias av="cd ~/codehesion/projects/airvantage/"
+alias avd="cd ~/codehesion/notes/airvantage/"
+
+#class codes
+alias cos341="cd $HOME/uni/cos341"
+alias cos344="cd $HOME/uni/cos344"
+alias cos314="cd $HOME/uni/cos314"
+alias dot="cd $HOME/.dotfiles"
+
+
+export cos314=$HOME/uni/cos314
+export cos344=$HOME/uni/cos344
+export cos341=$HOME/uni/cos341
+
+export dot=~/.dotfiles/
+export media=/run/media/brendon
+
+
+# config file variables
+export vrc=~/.dotfiles/vim/nvimrc
+export zrc=~/.dotfiles/zsh/zshrc
+export PATH=/opt/cuda/bin:$PATH # cuda path
+#l after cd
+
+# function  cd {
+#     builtin cd "$@" && ls 
+#     }
+
+# open application with defualt app
+alias open="xdg-open"
+# Create new flashcard template
+alias flashcards="cp /opt/flashcards/flashcards.ods ./f.ods"
+
+################################################
+# git aliases
+###############################################
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+# alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+
+################################################
+# git functions
+###############################################
+function cm () { # commit message
+    git_root=`git rev-parse --show-toplevel`
+    params='set syntax=gitcommit | set spell'
+    nvim -c $params  $git_root/.git/CUSTOM_COMMIT_MESSAGE
+}
+
+function cf() { # git commit file
+    git_root=`git rev-parse --show-toplevel`
+    if [[ -z $1 ]]; then
+        git commit -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+    else
+        git commit -n -F $git_root/.git/CUSTOM_COMMIT_MESSAGE
+    fi
+}
+
+function cdgr() { # git commit file
+    git_root=`git rev-parse --show-toplevel`
+    cd $git_root
+}
+
+################################################
+# useful aliases
+###############################################
+alias c=/bin/clear
+alias ping='ping -c 5'
+alias getpass="openssl rand -base64 "
+alias clear='echo use c instead'
+###############################################
+#
+function sec_pass() {
+    LENGTH=25
+    if [ ! -z "$1" ] && [ $1 -gt 1 ]; then
+        LENGTH=$1
+    fi
+    NUMBYTES=`echo $LENGTH | awk '{print int($1*1.16)+1}'`
+
+    openssl rand -base64 $NUMBYTES | tr -d "=+/" | cut -c1-$LENGTH
+}
+
+function cleanup() {
+	echo $1;
+	CONTAINS_LOGS=($(grep -r -n --include \*.ts console.log  | cut -d: -f1 | uniq | tail -n 3))
+	for file in $CONTAINS_LOGS
+	do
+		vim $file
+		git add $file
+	done
+}
+
+################################################
+# application aliases
+###############################################
+alias r='ranger'
+alias v='nvim'
+alias z='zathura --fork'
+alias t='$TERMINAL 2> /dev/null &|'
+alias o='okular'
+###############################################
+#
+#
+#
+#
+#
+################################################
+# Android 
+###############################################
+#
+
+# export ANDROID_HOME=/opt/android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# export PATH=$PATH:$HOME/.dotfiles/scripts/bluetooth
+# export PATH=$PATH:$HOME/.dotfiles/scripts/startup
+# export PATH=/opt/android-sdk/platform-tools/:$PATH
+
+export TERMINAL=terminator
+################################################
+# SCRIPTS FOLDER
+###############################################
+# 
+###############################################
+#
+#
+################################################
+# VIM MODE 
+###############################################
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey '^K' up-line-or-search
+bindkey '^J' down-line-or-search
+bindkey -v '^?' backward-delete-char
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[1 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    # zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+
+################################################
+# MISC FUNCTIONS
+###############################################
+function fitchClean() {
+	grep regex $1 | sed -e 's/\^\(.*\)\$/\1/' | cut -d'=' -f2 > memo_cleaned.txt
+}
+
+autoload -U compinit
+compinit
+
+
+# NPM packages in homedir
+NPM_PACKAGES="$HOME/.npm-packages"
+   
+npm config set prefix $NPM_PACKAGES
+
+# Tell our environment about user-installed node tools
+PATH="$NPM_PACKAGES/bin:$PATH"
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your configuration
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+   
+# Tell Node about these packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

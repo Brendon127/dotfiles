@@ -1,0 +1,6 @@
+set selection-clipboard clipboard
+map K zoom in
+map J zoom out
+
+map u scroll full-up
+map d scroll full-down 
