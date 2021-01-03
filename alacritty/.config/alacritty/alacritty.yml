@@ -4,7 +4,6 @@ colors:
   primary:
     background: '#263238'
     foreground: '#eeffff'
-
   # Normal colors
   normal:
     black:   '#000000'  # Arbitrary
@@ -27,4 +26,5 @@ colors:
     cyan:    '#89ddff'
     white:   '#ffffff'  # Arbitrary
 font:
-    size: 8
+    size: 10
+background_opacity: 0.9 

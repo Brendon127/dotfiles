@@ -1,6 +1,9 @@
 starship init fish | source
 
-set EDITOR nvim
+set -gx EDITOR nvim
+set -gx PATH $PATH $HOME/bin
+set -gx PATH $PATH (yarn global bin)
+
 
 alias gs='git status'
 alias ga='git add '
@@ -23,14 +26,22 @@ alias ta='tmux attach'
 alias tls='tmux ls'
 
 set -e fish_user_paths
-set ANDROID_HOME /opt/android/Sdk
-set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/emulator
-set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools
-set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools/bin
-set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
 
-# set PATH $PATH $HOME/.dotfiles/scripts/bluetooth
-set PATH $PATH $HOME/.dotfiles/scripts/startup
+# set ANDROID_HOME /opt/android/Sdk
+# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/emulator
+# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools
+# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools/bin
+# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
+
+set --export ANDROID $HOME/dev/android
+set --export ANDROID_HOME $ANDROID/sdk;
+set -gx PATH $ANDROID_HOME/tools $PATH;
+set -gx PATH $ANDROID_HOME/tools/bin $PATH;
+set -gx PATH $ANDROID_HOME/platform-tools $PATH;
+set -gx PATH $ANDROID_HOME/emulator $PATH
+
+set --export JAVA_HOME /opt/android-studio/jre
+set -gx PATH $JAVA_HOME/bin $PATH;
 
 set TERMINAL alacritty
 

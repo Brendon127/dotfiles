@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-slack &> /dev/null &|
 thunderbird &> /dev/null &|
 skypeforlinux &> /dev/null &|
 
