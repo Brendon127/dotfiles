@@ -166,7 +166,7 @@ bindsym $mod+F2 move workspace to output $monitor-0
 bindsym $mod+F3 move workspace to output $monitor-1
 
 # split toggle
-bindsym $mod+t split toggle
+bindsym $mod+BackSpace split toggle
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
