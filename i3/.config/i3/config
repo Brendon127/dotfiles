@@ -102,6 +102,8 @@ set $chat4 "thunderbird"
 set $chat5 "zulip"
 set $dev-app "dev-app"
 set $music "music"
+set $git "git"
+set $api "api"
 
 set $ws1 "1"
 set $ws2 "2"
@@ -129,6 +131,8 @@ workspace $chat3 output $laptop-screen
 workspace $chat4 output $laptop-screen
 workspace $chat5 output $laptop-screen
 workspace $dev-app output $monitor-1 $laptop-screen
+workspace $git output $monitor-1 $laptop-screen
+workspace $api output $monitor-1 $laptop-screen
 
 workspace $ws2 output $monitor-1 $laptop-screen
 workspace $ws3 output $monitor-1 $laptop-screen
@@ -146,8 +150,8 @@ assign[class="Zulip"] $chat5
 assign[class="Spotify"] $music
 assign[class="spotify"] $music
 
-assign[class="Postman"] $ws2
-assign[class="GitKraken"] $ws3
+assign[class="Postman"] $api
+assign[class="GitKraken"] $git
 
 for_window [class="Spotify"] move to workspace $music
 
@@ -178,11 +182,8 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+b workspace $browser
 bindsym $mod+n workspace $dev-app
 bindsym $mod+m workspace $music
-
-# mod+,
-# bindcode $mod+59 workspace $terminal-1
-# # mod+.
-# bindcode $mod+60 workspace $terminal-2
+bindsym $mod+g workspace $git
+bindsym $mod+p workspace $api
 
 
 # move focused container to workspace
@@ -199,8 +200,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+b move container to workspace $browser
 bindsym $mod+Shift+n move container to workspace $dev-app
 bindsym $mod+Shift+m move container to workspace $music
-# bindcode $mod+Shift+59  move container to workspace $terminal-1
-# bindcode $mod+Shift+60  move container to workspace $terminal-2
+bindsym $mod+Shift+g move container to workspace $git
+bindsym $mod+Shift+p move container to workspace $api
 
 bindsym $mod+F5 exec $HOME/.dotfiles/scripts/qwerty
 bindsym $mod+F6 exec $HOME/.dotfiles/scripts/dvorak
