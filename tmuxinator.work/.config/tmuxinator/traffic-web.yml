@@ -1,0 +1,17 @@
+# /home/brendon/.config/tmuxinator/peermont-web.yml
+
+name: traffic-web
+root: ~/projects/rails/traffic-web
+pre_window: rvm use 2.6.4
+on_project_first_start: kill $( ps aux | grep [p]uma | awk '{print $2}' )
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim
+  - server: 
+      layout: even-vertical
+      panes: 
+        - bundle exec rails s -b 0.0.0.0
+        - bundle exec sidekiq
+  - logs: tail -f log/development.log
