@@ -1,8 +1,19 @@
+set -e fish_user_paths
 starship init fish | source
+rbenv init - | source
 
 set -gx EDITOR nvim
 set -gx PATH $PATH $HOME/bin
 set -gx PATH $PATH (yarn global bin)
+set -gx PATH $HOME/.rbenv/bin $PATH
+
+function cd
+    if count $argv > /dev/null
+        builtin cd "$argv"; and ls
+    else
+        builtin cd ~; and ls
+    end
+end
 
 
 alias gs='git status'
@@ -25,7 +36,6 @@ alias tn='tmux new-session'
 alias ta='tmux attach'
 alias tls='tmux ls'
 
-set -e fish_user_paths
 
 # set ANDROID_HOME /opt/android/Sdk
 # set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/emulator
