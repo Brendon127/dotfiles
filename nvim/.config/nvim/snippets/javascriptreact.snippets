@@ -1,0 +1,46 @@
+#####################################################################
+# React Native 
+#####################################################################
+snippet rnc "React Native Component"
+import React from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import PropTypes from 'prop-types';
+
+const $1 = ($2) => {
+	return (
+	<View>
+		<Text>Hello, Component</Text>
+	</View>
+
+    );
+};
+
+
+const styles = StyleSheet.create({
+});
+
+$1.propTypes = {
+	$3
+};
+
+$1.defaultProps = {
+	$4
+};
+
+export default $1;
+endsnippet
+
+snippet id "import default" b
+import ${1:Module} from '${2:path}';
+endsnippet
+
+snippet ii "import" b
+import { ${1:Module} } from '${2:path}';
+endsnippet
+
+snippet rnpt "Proptypes"
+import PropTypes from 'prop-types';
+$1.propTypes = {
+
+};
+endsnippet

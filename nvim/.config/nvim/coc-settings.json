@@ -1,0 +1,19 @@
+{
+  "suggest.echodocSupport": true,
+  "coc.preferences.formatOnSaveFiletypes": ["json"],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "typescript.tsx"
+  ],
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "suggest.numberSelect": false,
+  "suggest.noselect": false,
+  "typescript.suggest.autoImports": true,
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false
+}
