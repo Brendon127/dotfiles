@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 pkill -TERM slack 
 pkill -TERM thunderbird 
@@ -7,3 +7,4 @@ pkill -TERM spotify
 pkill -TERM skype
 pkill -TERM zulip
 pkill -TERM blueman-applet
+pkill -TERM Discord
