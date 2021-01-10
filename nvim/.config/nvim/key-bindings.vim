@@ -22,8 +22,8 @@ nnoremap <C-H> <C-W><C-H>
 " set splitbelow
 " set splitright
 "
-" inoremap <ESC> <C-C>
 
+inoremap <C-c> <esc>
 
 function! EchoWarning(msg)
   echohl ErrorMsg

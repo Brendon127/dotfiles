@@ -3,7 +3,8 @@ syntax enable " Enable syntax highlighting
 
 " colorsheme 
 colorscheme onedark
-set termguicolors
+" set termguicolors
+" set background=dark
 " Spacing
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing

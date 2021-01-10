@@ -24,7 +24,6 @@ Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
 Plug 'zivyangll/git-blame.vim'                          " Shortcut to blame
 Plug 'tpope/vim-fugitive'
-Plug 'SirVer/ultisnips'                                 " Snippets engine
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'pseewald/vim-anyfold'                             " Code folding
