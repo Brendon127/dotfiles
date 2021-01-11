@@ -1,0 +1,15 @@
+# /home/brendon/.config/tmuxinator/airvantage.yml
+
+name: rn-template
+root: ~/projects/internal/react-native-template-codehesion/template
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim
+  - server:
+      layout: main-horizontal
+      panes:
+        - yarn start --reset-cache
+        - yarn run android
