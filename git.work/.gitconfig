@@ -3,7 +3,6 @@
 	name = Brendon
 	signingkey = C3B1A6C461804E50
 [commit]
-	template = $HOME/.dotfiles/development/git/gitmessage
 	gpgsign = true
 [core]
 	editor = 'nvim' 
@@ -20,3 +19,7 @@
 	ui = auto
 [cola]
 	spellcheck = false
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
