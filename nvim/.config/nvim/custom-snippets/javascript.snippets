@@ -1,6 +1,7 @@
 #####################################################################
 # Snippet Functions
 #####################################################################
+
 global !p
 def convertBody(s):
 	body = '($1 =>  {\n$2/* do stuff */\n}\n)'
@@ -101,6 +102,8 @@ $2
 const initialState = {
 };
 
+export const $1Selector = (reducers) => reducers.$1Reducer;
+
 export default function $1Reducer(state = initialState, action) {
     switch (action.type) {
         default:
@@ -119,6 +122,18 @@ case $1.actionType:
 		${2: state}: action.payload
 	};
 	
+endsnippet
+
+snippet rncaa "Create action in actions.js"
+export const ${1:actionName}Action = () => (dispatch) => {
+	$2
+};
+endsnippet
+
+snippet fp "Create action in actions.js"
+($1) => {
+	$2
+}
 endsnippet
 
 # var ${1} = require('${1/(([a-z][A-Z])+)/\U_\E/g}');

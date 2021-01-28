@@ -10,6 +10,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'          " Syntax highlight for N
 
 Plug 'tpope/vim-commentary'                             " Easy comments with gcc
 Plug 'tpope/vim-surround'                               " Easy surround
+Plug 'SirVer/ultisnips'
 
 Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
 " Plug 'Raimondi/delimitMate'
