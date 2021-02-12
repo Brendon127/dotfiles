@@ -15,5 +15,6 @@
   "suggest.noselect": false,
   "typescript.suggest.autoImports": true,
   "javascript.suggestionActions.enabled": false,
-  "typescript.suggestionActions.enabled": false
+  "typescript.suggestionActions.enabled": false,
+  "cSpell.language": "en-GB"
 }

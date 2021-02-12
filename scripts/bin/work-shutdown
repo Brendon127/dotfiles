@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-pkill -TERM slack 
 pkill -TERM thunderbird 
 pkill -TERM brave 
 pkill -TERM spotify
@@ -8,3 +7,6 @@ pkill -TERM skype
 pkill -TERM zulip
 pkill -TERM blueman-applet
 pkill -TERM Discord
+pkill -TERM GitKraken
+pkill -TERM Postman
+pkill -TERM pavucontrol

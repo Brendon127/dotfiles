@@ -84,6 +84,10 @@ let mapleader =" "
 
     "p - project
     "g - git
+        "g - open fugitive
+            nnoremap <silent> <leader>gg :Git <CR> :only <CR>
+        "l - open git log
+            nnoremap <silent> <leader>gl :Glog <CR>
         "n - next hunk
             nnoremap <silent> <leader>gn :GitGutterNextHunk <CR>
         "p - previous hunk
@@ -92,10 +96,6 @@ let mapleader =" "
             nnoremap <silent> <leader>ga :GitGutterStageHunk <CR>
         "u - previous hunk
             nnoremap <silent> <leader>gu :GitGutterUndoHunk <CR>
-        "s - next hunk
-            nnoremap <silent> <leader>gs :Magit<CR>
-        "b - git blame on line
-            nnoremap <silent> <leader>gb :GitBlame<CR>
 
     "s - snippets
     "w - window

@@ -1,13 +1,17 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-thunderbird &> /dev/null &|
-skypeforlinux &> /dev/null &|
+redshift -O 5500
 
-brave &> /dev/null &|
-spotify &> /dev/null &|
-zulip &> /dev/null &|
+thunderbird &> /dev/null &
+skypeforlinux &> /dev/null &
 
-blueman-applet &> /dev/null &|
+brave &> /dev/null &
+spotify &> /dev/null &
+zulip &> /dev/null &
+discord &> /dev/null &
 
-docker start my-redis postgres_db
+
+blueman-applet &> /dev/null &
+
+# docker start my-redis postgres_db
 

@@ -21,7 +21,6 @@ Plug 'mattn/emmet-vim'                                  " Quick html tags
 Plug 'sheerun/vim-polyglot'                             " Mutli language support
 
 Plug 'airblade/vim-gitgutter'                           " Git gutter
-Plug 'jreybert/vimagit'                                 " Magit for vim :D
 Plug 'tpope/vim-git'                                    " Pretty format for git
 Plug 'zivyangll/git-blame.vim'                          " Shortcut to blame
 Plug 'tpope/vim-fugitive'
@@ -29,7 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'pseewald/vim-anyfold'                             " Code folding
 
-Plug 'vim-airline/vim-airline'                                 
+" Plug 'vim-airline/vim-airline'                                 
 
 Plug 'tpope/vim-rails'
 
@@ -51,6 +50,6 @@ source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/git-gutter.vim
 source ~/.config/nvim/plugins/ultisnips.vim
 source ~/.config/nvim/plugins/camel-case.vim
-source ~/.config/nvim/plugins/airline.vim
+" source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/anyfold.vim
 source ~/.config/nvim/plugins/ack.vim

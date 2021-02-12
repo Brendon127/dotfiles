@@ -20,6 +20,6 @@
 [cola]
 	spellcheck = false
 [init]
-	defaultBranch = main
+	defaultBranch = master
 [pull]
 	rebase = false
