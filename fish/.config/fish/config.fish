@@ -1,6 +1,5 @@
 set -e fish_user_paths
 starship init fish | source
-rbenv init - | source
 
 set -gx EDITOR nvim
 set -gx PATH $PATH $HOME/bin
@@ -14,6 +13,8 @@ function cd
         builtin cd ~; and ls
     end
 end
+
+set -gx GPG_TTY (tty)
 
 
 alias gs='git status'
@@ -37,12 +38,6 @@ alias ta='tmux attach'
 alias tls='tmux ls'
 
 
-# set ANDROID_HOME /opt/android/Sdk
-# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/emulator
-# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools
-# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/tools/bin
-# set --universal fish_user_paths $fish_user_paths $ANDROID_HOME/platform-tools
-
 set --export ANDROID $HOME/dev/android
 set --export ANDROID_HOME $ANDROID/sdk;
 set -gx PATH $ANDROID_HOME/tools $PATH;
@@ -53,7 +48,7 @@ set -gx PATH $ANDROID_HOME/emulator $PATH
 set --export JAVA_HOME /opt/android-studio/jre
 set -gx PATH $JAVA_HOME/bin $PATH;
 
-set TERMINAL alacritty
+set TERMINAL kitty
 
 set -U fish_greeting ""
 
