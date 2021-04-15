@@ -1,0 +1,15 @@
+# /home/brendon/.config/tmuxinator/airvantage.yml
+
+name: kunnek
+root: ~/projects/react-native/Kunnek
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim
+  - server:
+      layout: main-horizontal
+      panes:
+        - yarn start --reset-cache
+        - yarn run android

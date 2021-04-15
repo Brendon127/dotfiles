@@ -102,21 +102,18 @@ let mapleader =" "
         nnoremap <silent> <leader>w <C-w>
     "c - code
         " d -jump to definition
-                " nnoremap <silent> <leader>cd <C-]>
-                nmap <leader>cd <Plug>(coc-definition)
+                autocmd FileType typescript nmap <leader>cd <Plug>(coc-definition)
+                autocmd FileType cs nmap <leader>cd :OmniSharpGotoDefinition <CR>
         " l -jump to definition
-                nnoremap <silent> <leader>cl :CocCommand eslint.executeAutofix <CR> :w <CR>
+                autocmd FileType typescript nnoremap <silent> <leader>cl :CocCommand eslint.executeAutofix <CR> :w <CR>
+                autocmd FileType cs nnoremap <silent> <leader>cl :OmniSharpCodeFormat <CR> :w <CR>
         " i - Fix indentation
                 nnoremap <silent> <leader>ci gg=G<C-o>
         " a - Code Action
-                nmap <leader>ca <Plug>(coc-codeaction)
-                " nmap <leader>do <Plug>(coc-codeaction)
-        " v - Jump to view
-                nmap <leader>cv :Eview <CR>
-        " c - Jump to controller
-                nmap <leader>cc :Econtroller
-        " m - Jump to model
-                nmap <leader>cc :Emodel
+                autocmd FileType typescript nmap <leader>ca <Plug>(coc-codeaction)
+                autocmd FileType cs nmap <leader>ca :OmniSharpGetCodeActions <CR>
+        " u - Fix Usings
+                autocmd FileType cs nmap <leader>cu :OmniSharpFixUsings <CR>
 
     "/ - search
         " g global

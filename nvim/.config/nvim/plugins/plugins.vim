@@ -1,6 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Autocompletion
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'                              " File explorer
@@ -11,6 +13,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'          " Syntax highlight for N
 Plug 'tpope/vim-commentary'                             " Easy comments with gcc
 Plug 'tpope/vim-surround'                               " Easy surround
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 Plug 'jiangmiao/auto-pairs'                             " Auto pairs on brackets
 " Plug 'Raimondi/delimitMate'
@@ -53,3 +56,5 @@ source ~/.config/nvim/plugins/camel-case.vim
 " source ~/.config/nvim/plugins/airline.vim
 source ~/.config/nvim/plugins/anyfold.vim
 source ~/.config/nvim/plugins/ack.vim
+source ~/.config/nvim/plugins/ale.vim
+source ~/.config/nvim/plugins/omnisharp.vim

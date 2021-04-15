@@ -3,12 +3,12 @@
 redshift -O 5500
 
 thunderbird &> /dev/null &
-skypeforlinux &> /dev/null &
+# skypeforlinux &> /dev/null &
 
 brave &> /dev/null &
 spotify &> /dev/null &
 zulip &> /dev/null &
-discord &> /dev/null &
+teams &> /dev/null &
 
 
 blueman-applet &> /dev/null &

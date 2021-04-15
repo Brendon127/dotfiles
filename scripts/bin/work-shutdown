@@ -10,3 +10,4 @@ pkill -TERM Discord
 pkill -TERM GitKraken
 pkill -TERM Postman
 pkill -TERM pavucontrol
+pkill -TERM teams

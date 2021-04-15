@@ -37,6 +37,9 @@ alias tn='tmux new-session'
 alias ta='tmux attach'
 alias tls='tmux ls'
 
+# Dotnet
+alias nuget="mono /usr/local/bin/nuget.exe"
+set --universal fish_user_paths $fish_user_paths ~/.dotnet/tools/
 
 set --export ANDROID $HOME/dev/android
 set --export ANDROID_HOME $ANDROID/sdk;
@@ -48,7 +51,7 @@ set -gx PATH $ANDROID_HOME/emulator $PATH
 set --export JAVA_HOME /opt/android-studio/jre
 set -gx PATH $JAVA_HOME/bin $PATH;
 
-set TERMINAL kitty
+# set TERMINAL kitty
 
 set -U fish_greeting ""
 
@@ -75,3 +78,4 @@ function cdgr
     set git_root ( git rev-parse --show-toplevel )
     cd $git_root
 end
+source ~/.config/fish/dotnet.fish

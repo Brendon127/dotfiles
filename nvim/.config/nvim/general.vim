@@ -2,7 +2,7 @@
 syntax enable " Enable syntax highlighting
 
 " colorsheme 
-colorscheme onedark
+colorscheme gruvbox
 " set termguicolors
 " set background=dark
 " Spacing
