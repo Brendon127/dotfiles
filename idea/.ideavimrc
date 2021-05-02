@@ -1,0 +1,54 @@
+set number
+set relativenumber
+
+set surround
+set commentary
+
+nnoremap j gj
+nnoremap k gk
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nnoremap <C-O> :action Back<cr>
+nnoremap <C-I> :action Forward<cr>
+
+
+nmap gcc :action CommentByLineComment<CR>
+vmap gc :action CommentByLineComment<CR>
+
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+
+let mapleader =" "
+
+nnoremap <leader>. <M-Home>
+
+" SPC
+    " SPC - Open find file
+        nmap <leader><leader> <Action>(GotoFile)
+    " , - Open recent files
+        nmap <leader>, <Action>(RecentFiles)
+    "
+    "s - save
+        " nnoremap <silent> <leader>s :w <cr>
+    " x - errors
+        " nmap <leader>x :action GotoNextError<cr>
+        " nmap <leader>X :action GotoPreviousError<cr>
+    "c - code
+        " d -jump to definition
+            nmap <leader>cd <Action>(GotoDeclaration)
+        " d -jump to implementation
+            nmap <leader>ci <Action>(GotoImplementation)
+        " l -Reformat code
+            nmap <leader>cl <Action>(ReformatCode)
+        " a -Code Actions
+            nmap <leader>ca <Action>(ShowIntentionActions)
+        " l lint fix
+            " nmap <leader>cl :action Javascript.Linters.EsLint.Fix<cr>
+    "/ - search
+        " f -function
+            nnoremap <silent> <leader>/f :action FileStructurePopup<CR>
+
