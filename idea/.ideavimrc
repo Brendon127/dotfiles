@@ -34,9 +34,16 @@ nnoremap <leader>. <M-Home>
     "
     "s - save
         " nnoremap <silent> <leader>s :w <cr>
-    " x - errors
-        " nmap <leader>x :action GotoNextError<cr>
-        " nmap <leader>X :action GotoPreviousError<cr>
+    " e - errors
+        nmap <leader>en <Action>(GotoNextError)
+        nmap <leader>ep <Action>(GotoPreviousError)
+    "r - refactor
+        " r -jump to definition
+            nmap <leader>rr <Action>(Refactorings.QuickListPopupAction)
+            vmap <leader>r <Action>(Refactorings.QuickListPopupAction)
+    "o - refactor
+        " d - Select in
+            nmap <leader>od <Action>(SelectIn)
     "c - code
         " d -jump to definition
             nmap <leader>cd <Action>(GotoDeclaration)

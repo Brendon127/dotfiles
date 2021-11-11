@@ -2,16 +2,14 @@
 
 redshift -O 5500
 
-thunderbird &> /dev/null &
-# skypeforlinux &> /dev/null &
-
 brave &> /dev/null &
 spotify &> /dev/null &
-zulip &> /dev/null &
-teams &> /dev/null &
+# zulip &> /dev/null &
+# thunderbird &> /dev/null &
+# discord &> /dev/null &
+# teams &> /dev/null &
+zoho-mail-desktop &> /dev/null &
 
-
-blueman-applet &> /dev/null &
 
 # docker start my-redis postgres_db
 

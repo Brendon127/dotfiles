@@ -297,7 +297,7 @@ bindsym XF86MonBrightnessDown exec $HOME/.dotfiles/scripts/i3-controls/brighness
 
 # exec_always xmodmap ~/.Xmodmap
 #exec_always xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-scale $HOME/pictures/001.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/pictures/002.jpg
 exec_always --no-startup-id picom -b
 exec --no-startup-id  polybar laptop --reload
 exec --no-startup-id  polybar monitorOne --reload
