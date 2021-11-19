@@ -16,4 +16,5 @@ source $ZSH/oh-my-zsh.sh
 
 alias v='nvim'
 alias c='clear'
+alias r='ranger'
 
