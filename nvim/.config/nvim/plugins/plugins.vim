@@ -3,7 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}         " Autocompletion
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
+
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'                              " File explorer
 
