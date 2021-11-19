@@ -1,7 +1,7 @@
 [user]
-	email = brendon@codehesion.co.za
+	email = brendonvb@touchsides.com
 	name = Brendon
-	signingkey = C3B1A6C461804E50
+	signingkey = BF40B771E8E33FB8
 [commit]
 	gpgsign = true
 [core]
@@ -23,3 +23,5 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg
