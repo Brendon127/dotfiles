@@ -1,11 +1,12 @@
 [user]
-	email = brendonvb@touchsides.com
+	email = brendon@codehesion.co.za
 	name = Brendon
 	signingkey = BF40B771E8E33FB8
 [commit]
-	gpgsign = true
+	gpgsign = false
 [core]
 	editor = 'nvim' 
+	autocrlf = input
 [mergetool]
 	keepBackup = false
 [mergetool "fugitive"]

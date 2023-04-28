@@ -7,7 +7,12 @@ success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = true
+disabled = false
 
 [git_commit]
 tag_disabled = false
+
+
+[kubernetes]
+format = 'on [⛵ ($user on )($cluster in )$context ns:\($namespace\)](bold blue) '
+disabled = false
