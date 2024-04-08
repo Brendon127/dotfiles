@@ -58,6 +58,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "scrooloose/nerdtree",
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+    { "nxstynate/oneDarkPro.nvim", priority = 1000 }
 })
 
 
