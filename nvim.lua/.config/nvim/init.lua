@@ -1,4 +1,3 @@
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 0
@@ -16,6 +15,9 @@ vim.opt.hlsearch = true
 
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
+vim.opt.updatetime = 100
+
 
 
 -- Scrolling
@@ -59,7 +61,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     "scrooloose/nerdtree",
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    { "nxstynate/oneDarkPro.nvim", priority = 1000 }
+    { "nxstynate/oneDarkPro.nvim", priority = 1000 },
+    "airblade/vim-gitgutter"
 })
 
 
