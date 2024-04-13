@@ -70,3 +70,6 @@ local NERDTreeDirArrows = 1
 vim.g.NERDTreeWinSize = 30
 vim.api.nvim_command('autocmd FileType nerdtree setlocal relativenumber')
 
+-- Color
+--
+vim.cmd("colorscheme oneDarkPro")
