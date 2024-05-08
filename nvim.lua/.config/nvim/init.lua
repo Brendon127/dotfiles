@@ -62,7 +62,8 @@ require("lazy").setup({
     "scrooloose/nerdtree",
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     { "nxstynate/oneDarkPro.nvim", priority = 1000 },
-    "airblade/vim-gitgutter"
+    "airblade/vim-gitgutter",
+    "tpope/vim-fugitive",
 })
 
 
