@@ -3,3 +3,7 @@ env
 plugged
 completions
 
+
+karabiner/.config/karabiner/automatic_backups/
+
+.DS_Store
