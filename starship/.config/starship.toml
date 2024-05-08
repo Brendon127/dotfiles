@@ -1,3 +1,5 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 # Don't print a new line at the start of the prompt
 add_newline = false
 
@@ -15,4 +17,10 @@ tag_disabled = false
 
 [kubernetes]
 format = 'on [⛵ ($user on )($cluster in )$context ns:\($namespace\)](bold blue) '
-disabled = false
+disabled = true
+
+[azure]
+disabled = true
+format = 'on [$symbol($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue bold'
