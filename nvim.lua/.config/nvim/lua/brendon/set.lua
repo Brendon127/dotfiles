@@ -9,6 +9,7 @@ vim.opt.copyindent = true
 vim.opt.wrap = false
 
 vim.opt.relativenumber = true
+vim.opt.number = true
 
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
