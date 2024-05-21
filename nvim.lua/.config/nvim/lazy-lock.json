@@ -12,6 +12,7 @@
   "oneDarkPro.nvim": { "branch": "master", "commit": "3206d376726338d5bc2d9d99a27bffc53a9780dc" },
   "plenary.nvim": { "branch": "master", "commit": "08e301982b9a057110ede7a735dd1b5285eb341f" },
   "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
+  "vim-commentary": { "branch": "master", "commit": "c4b8f52cbb7142ec239494e5a2c4a512f92c4d07" },
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
   "vim-gitgutter": { "branch": "main", "commit": "67ef116100b40f9ca128196504a2e0bc0a2753b0" }
 }
