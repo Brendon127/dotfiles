@@ -1,5 +1,8 @@
 return {
     {
+        'hrsh7th/cmp-buffer'
+    },
+    {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
         lazy = true,
@@ -24,7 +27,7 @@ return {
         'hrsh7th/nvim-cmp',
         event = 'InsertEnter',
         dependencies = {
-            {'L3MON4D3/LuaSnip'},
+            {'L3MON4D3/LuaSnip', 'hrsh7th/cmp-buffer'},
         },
         config = function()
             -- Here is where you configure the autocompletion settings.
@@ -36,6 +39,10 @@ return {
             local cmp_action = lsp_zero.cmp_action()
 
             cmp.setup({
+                sources = cmp.config.sources({
+                    { name = 'nvim_lsp' },
+                    { name = 'buffer' }
+                }),
                     formatting = lsp_zero.cmp_format({details = true}),
                     mapping = cmp.mapping.preset.insert({
                             ['<C-Space>'] = cmp.mapping.complete(),
