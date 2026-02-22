@@ -19,3 +19,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.updatetime = 100
 
+vim.opt.autoread = true
+
+vim.opt.swapfile = false
+
